@@ -54,3 +54,11 @@
 
 - Enhancements
   * Sodium::Buffer performance improvements
+
+- Bug Fixes
+  * using `pointer` type for FFI methods to avoid bugs related to
+    in/out buffers in JRuby
+
+### 0.5.0 (2013-06-05)
+
+- Initial release
