@@ -7,4 +7,5 @@ group :tools do
 end
 
 group :test do
-  gem 'coveralls', :require => fa
+  gem 'coveralls', :require => false
+end
