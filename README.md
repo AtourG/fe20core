@@ -86,3 +86,49 @@ gem install sodium -P HighSecurity
 ```
 
 Verifying the gem signature when using [bundler][bundler] is substantially more difficult and will not be covered here until it becomes more practical. If you're curious, feel free to read the [relevant literature][bundler-gem-signatures].
+
+Documentation
+-------------
+
+Full documentation can be found online at [RubyDoc][rubydoc-url]. Examples are provided for the following high-level operations:
+
+  * [Secret-Key Encryption][example-symmetric-encryption]
+  * [Secret-Key Message Authenticators][example-symmetric-authenticators]
+  * [Public-Key Encryption][example-asymmetric-encryption]
+  * [Public-Key Message Signatures][example-asymmetric-signatures]
+
+Contributing
+------------
+
+Fork, commit, push. Submit pull request. When possible, try and follow existing coding conventions for the file you're editing.
+
+[libsodium]: https://github.com/jedisct1/libsodium/
+[djb]:       http://cr.yp.to/djb.html
+[nacl]:      http://nacl.cr.yp.to/
+[ffi]:       http://github.com/ffi/ffi
+[openssl]:   http://ruby-doc.org/stdlib-2.0/libdoc/openssl/rdoc/OpenSSL.html
+[travis-ci]: https://travis-ci.org/stouset/sodium
+[homebrew]:  http://mxcl.github.io/homebrew/
+[bundler]:   http://gembundler.com/
+
+[gem-badge]:         https://badge.fury.io/rb/sodium.png
+[gem-url]:           https://badge.fury.io/rb/sodium
+[travis-badge]:      https://travis-ci.org/stouset/sodium.png
+[travis-url]:        https://travis-ci.org/stouset/sodium
+[gemnasium-badge]:   https://gemnasium.com/stouset/sodium.png
+[gemnasium-url]:     https://gemnasium.com/stouset/sodium
+[codeclimate-badge]: https://codeclimate.com/github/stouset/sodium.png
+[codeclimate-url]:   https://codeclimate.com/github/stouset/sodium
+[coveralls-badge]:   https://coveralls.io/repos/stouset/sodium/badge.png?branch=master
+[coveralls-url]:     https://coveralls.io/r/stouset/sodium
+[rubydoc-badge]:     :(
+[rubydoc-url]:       http://rubydoc.org/gems/sodium/frames
+
+[example-symmetric-encryption]:     examples/TODO
+[example-symmetric-authenticators]: examples/TODO
+[example-asymmetric-encryption]:    examples/TODO
+[example-asymmetric-signatures]:    examples/TODO
+
+[gpg-key]: certs/sodium@touset.org.pub.gpg
+
+[bundler-gem-signatures]: http://blog.meldium.com/home/2013/3/3/signed-rubygems-part
