@@ -4,4 +4,5 @@
     - BYTES
     - KEYBYTES
   
-  :funct
+  :functions: 
+    ~      : [ pointer, pointer, ulong_long, pointe
