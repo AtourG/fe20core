@@ -5,4 +5,5 @@
     - KEYBYTES
   
   :functions: 
-    ~      : [ pointer, pointer, ulong_long, pointe
+    ~      : [ pointer, pointer, ulong_long, pointer, int ]
+    :verify: [ pointer, pointer, ulong_long, poi
