@@ -1,2 +1,7 @@
 - :class    : Sodium::Auth
-  :family   : cry
+  :family   : crypto_auth
+  :constants:
+    - BYTES
+    - KEYBYTES
+  
+  :funct
