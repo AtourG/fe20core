@@ -10,4 +10,7 @@
 
   :primitives:
     - :HMACSHA512256
-    - :HMACSH
+    - :HMACSHA256
+
+- :class    : Sodium::Box
+  :family   : crypto_box
