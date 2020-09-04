@@ -6,4 +6,8 @@
   
   :functions: 
     ~      : [ pointer, pointer, ulong_long, pointer, int ]
-    :verify: [ pointer, pointer, ulong_long, poi
+    :verify: [ pointer, pointer, ulong_long, pointer, int ]
+
+  :primitives:
+    - :HMACSHA512256
+    - :HMACSH
