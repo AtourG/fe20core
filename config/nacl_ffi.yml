@@ -14,3 +14,7 @@
 
 - :class    : Sodium::Box
   :family   : crypto_box
+  :constants:
+    - PUBLICKEYBYTES
+    - SECRETKEYBYTES
+    - 
