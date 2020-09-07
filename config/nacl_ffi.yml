@@ -20,4 +20,8 @@
     - BEFORENMBYTES
     - NONCEBYTES
     - ZEROBYTES
- 
+    - BOXZEROBYTES
+    - MACBYTES
+    
+  :functions:
+  
