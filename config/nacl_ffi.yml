@@ -17,4 +17,7 @@
   :constants:
     - PUBLICKEYBYTES
     - SECRETKEYBYTES
-    - 
+    - BEFORENMBYTES
+    - NONCEBYTES
+    - ZEROBYTES
+ 
