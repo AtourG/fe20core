@@ -24,4 +24,5 @@
     - MACBYTES
     
   :functions:
-    ~            : [ pointer, pointer, ulong_long, pointer, pointer, pointe
+    ~            : [ pointer, pointer, ulong_long, pointer, pointer, pointer, int ]
+    :open        : [ pointer, pointer, ul
