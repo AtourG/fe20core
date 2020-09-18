@@ -25,4 +25,5 @@
     
   :functions:
     ~            : [ pointer, pointer, ulong_long, pointer, pointer, pointer, int ]
-    :open        : [ pointer, pointer, ul
+    :open        : [ pointer, pointer, ulong_long, pointer, pointer, pointer, int ]
+    :keypair     : [ 
