@@ -29,4 +29,6 @@
     :keypair     : [ pointer, pointer, int ]
     :beforenm    : [ pointer, pointer, pointer, int ]
     :afternm     : [ pointer, pointer, ulong_long, pointer, pointer, int ]
-    :open_afternm: [ p
+    :open_afternm: [ pointer, pointer, ulong_long, pointer, pointer, int ]
+
+  :p
