@@ -31,4 +31,7 @@
     :afternm     : [ pointer, pointer, ulong_long, pointer, pointer, int ]
     :open_afternm: [ pointer, pointer, ulong_long, pointer, pointer, int ]
 
-  :p
+  :primitives:
+    - :Curve25519XSalsa20Poly1305
+
+- :cla
