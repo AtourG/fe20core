@@ -34,4 +34,7 @@
   :primitives:
     - :Curve25519XSalsa20Poly1305
 
-- :cla
+- :class    : Sodium::Hash
+  :family   : crypto_hash
+  :constants:
+   
