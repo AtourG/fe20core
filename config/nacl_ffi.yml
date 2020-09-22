@@ -37,4 +37,7 @@
 - :class    : Sodium::Hash
   :family   : crypto_hash
   :constants:
-   
+    - BYTES
+
+  :functions:
+    ~: [ pointer, pointer
