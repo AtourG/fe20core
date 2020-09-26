@@ -40,4 +40,8 @@
     - BYTES
 
   :functions:
-    ~: [ pointer, pointer
+    ~: [ pointer, pointer, ulong_long, int ]
+
+  :primitives:
+    - :SHA512
+    - :SH
