@@ -44,4 +44,7 @@
 
   :primitives:
     - :SHA512
-    - :SH
+    - :SHA256
+
+- :class    : Sodium::OneTimeAuth
+  :family   : crypto_oneti
