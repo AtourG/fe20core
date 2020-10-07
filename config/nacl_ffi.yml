@@ -47,4 +47,9 @@
     - :SHA256
 
 - :class    : Sodium::OneTimeAuth
-  :family   : crypto_oneti
+  :family   : crypto_onetimeauth
+  :constants: 
+    - BYTES
+    - KEYBYTES
+
+  :function
