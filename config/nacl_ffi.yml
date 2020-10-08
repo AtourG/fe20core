@@ -52,4 +52,5 @@
     - BYTES
     - KEYBYTES
 
-  :function
+  :functions:
+    ~      : [ pointer, pointer, ulong_long, pointer, int 
