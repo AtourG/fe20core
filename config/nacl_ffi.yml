@@ -56,4 +56,7 @@
     ~      : [ pointer, pointer, ulong_long, pointer, int ]
     :verify: [ pointer, pointer, ulong_long, pointer, int ]
 
-  :primitiv
+  :primitives:
+    - :Poly1305
+
+- :class    : Sodium::S
