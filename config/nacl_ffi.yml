@@ -65,4 +65,7 @@
     - KEYBYTES
     - NONCEBYTES
     - ZEROBYTES
-    - BOXZEROBY
+    - BOXZEROBYTES
+
+  :functions:
+    ~    : [ pointer, pointer, ulong_lon
