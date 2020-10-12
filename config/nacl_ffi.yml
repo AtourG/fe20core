@@ -62,4 +62,7 @@
 - :class    : Sodium::SecretBox
   :family   : crypto_secretbox
   :constants:
-    -
+    - KEYBYTES
+    - NONCEBYTES
+    - ZEROBYTES
+    - BOXZEROBY
