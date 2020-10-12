@@ -59,4 +59,7 @@
   :primitives:
     - :Poly1305
 
-- :class    : Sodium::S
+- :class    : Sodium::SecretBox
+  :family   : crypto_secretbox
+  :constants:
+    -
