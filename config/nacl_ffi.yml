@@ -68,4 +68,5 @@
     - BOXZEROBYTES
 
   :functions:
-    ~    : [ pointer, pointer, ulong_lon
+    ~    : [ pointer, pointer, ulong_long, pointer, pointer, int ]
+    :open: [ pointer, point
