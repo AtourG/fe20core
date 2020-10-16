@@ -72,3 +72,7 @@
     :open: [ pointer, pointer, ulong_long, pointer, pointer, int ]
 
   :primitives:
+    - :XSalsa20Poly1305
+
+- :class    : Sodium::Sign
+  :family 
