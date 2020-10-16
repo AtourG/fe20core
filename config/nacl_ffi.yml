@@ -69,4 +69,6 @@
 
   :functions:
     ~    : [ pointer, pointer, ulong_long, pointer, pointer, int ]
-    :open: [ pointer, point
+    :open: [ pointer, pointer, ulong_long, pointer, pointer, int ]
+
+  :primitives:
