@@ -75,4 +75,7 @@
     - :XSalsa20Poly1305
 
 - :class    : Sodium::Sign
-  :family 
+  :family   : crypto_sign
+  :constants:
+    - BYTES
+    - PUBLICKEYBYTES
