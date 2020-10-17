@@ -79,3 +79,7 @@
   :constants:
     - BYTES
     - PUBLICKEYBYTES
+    - SECRETKEYBYTES
+
+  :functions:
+    ~      : [ pointer, point
