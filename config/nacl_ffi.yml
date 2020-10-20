@@ -83,4 +83,5 @@
 
   :functions:
     ~      : [ pointer, pointer, pointer, ulong_long, pointer, int ]
-    open   : [ pointer, poin
+    open   : [ pointer, pointer, pointer, ulong_long, pointer, int ]
+    keypair: [ pointe
