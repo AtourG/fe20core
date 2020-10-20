@@ -82,4 +82,5 @@
     - SECRETKEYBYTES
 
   :functions:
-    ~      : [ pointer, point
+    ~      : [ pointer, pointer, pointer, ulong_long, pointer, int ]
+    open   : [ pointer, poin
