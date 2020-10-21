@@ -84,4 +84,7 @@
   :functions:
     ~      : [ pointer, pointer, pointer, ulong_long, pointer, int ]
     open   : [ pointer, pointer, pointer, ulong_long, pointer, int ]
-    keypair: [ pointe
+    keypair: [ pointer, pointer, int ]
+
+  :primitives:
+    - :Ed25519
