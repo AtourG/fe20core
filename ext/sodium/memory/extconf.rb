@@ -3,4 +3,9 @@
 # disabled. This can be removed, apparently, when 1.7.5 is released.
 #
 if defined? ENV_JAVA
-  ENV_JAVA['jruby.cext.enabled'] = 't
+  ENV_JAVA['jruby.cext.enabled'] = 'true'
+end
+
+require 'mkmf'
+
+create_makefile('sodium/ffi/memo
