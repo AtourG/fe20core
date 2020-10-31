@@ -8,4 +8,4 @@ end
 
 require 'mkmf'
 
-create_makefile('sodium/ffi/memo
+create_makefile('sodium/ffi/memory')
