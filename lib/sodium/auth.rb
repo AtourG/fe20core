@@ -1,4 +1,7 @@
 require 'sodium'
 
 class Sodium::Auth
-  include Sodi
+  include Sodium::Delegate
+
+  def self.key
+    Sodium::Buffer.k
