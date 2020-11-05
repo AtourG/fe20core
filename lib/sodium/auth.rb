@@ -7,4 +7,6 @@ class Sodium::Auth
     Sodium::Buffer.key self.implementation[:KEYBYTES]
   end
 
-  def self.aut
+  def self.auth(key, message)
+    key     = self._key(key)
+   
