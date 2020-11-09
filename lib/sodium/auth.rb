@@ -14,4 +14,5 @@ class Sodium::Auth
     Sodium::Buffer.empty self.implementation[:BYTES] do |authenticator|
       self.implementation.nacl(
         authenticator.to_ptr,
-   
+        message      .to_ptr,
+        message      .bytesi
