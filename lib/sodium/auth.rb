@@ -9,4 +9,6 @@ class Sodium::Auth
 
   def self.auth(key, message)
     key     = self._key(key)
-   
+    message = self._message(message)
+
+    Sodium:
