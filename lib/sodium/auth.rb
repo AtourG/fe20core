@@ -11,4 +11,5 @@ class Sodium::Auth
     key     = self._key(key)
     message = self._message(message)
 
-    Sodium:
+    Sodium::Buffer.empty self.implementation[:BYTES] do |authenticator|
+    
