@@ -15,4 +15,6 @@ class Sodium::Auth
       self.implementation.nacl(
         authenticator.to_ptr,
         message      .to_ptr,
-        message      .bytesi
+        message      .bytesize,
+        key          .to_ptr
+      ) or raise Sodium::Cryp
