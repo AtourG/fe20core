@@ -19,4 +19,7 @@ class Sodium::Auth
         key          .to_ptr
       ) or raise Sodium::CryptoError, 'failed to generate an authenticator'
     end
-  en
+  end
+
+  def self.verify(key, message, authenticator)
+    key        
