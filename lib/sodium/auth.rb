@@ -17,4 +17,6 @@ class Sodium::Auth
         message      .to_ptr,
         message      .bytesize,
         key          .to_ptr
-      ) or raise Sodium::Cryp
+      ) or raise Sodium::CryptoError, 'failed to generate an authenticator'
+    end
+  en
