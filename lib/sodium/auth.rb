@@ -25,3 +25,6 @@ class Sodium::Auth
     key           = self._key(key)
     message       = self._message(message)
     authenticator = self._authenticator(authenticator)
+
+    self.implementation.nacl_verify(
+      authenticator.to_ptr,
