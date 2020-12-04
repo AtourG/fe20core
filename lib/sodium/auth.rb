@@ -22,4 +22,5 @@ class Sodium::Auth
   end
 
   def self.verify(key, message, authenticator)
-    key        
+    key           = self._key(key)
+    message       = self._message(me
