@@ -28,3 +28,6 @@ class Sodium::Auth
 
     self.implementation.nacl_verify(
       authenticator.to_ptr,
+      message      .to_ptr,
+      message      .bytesize,
+    
