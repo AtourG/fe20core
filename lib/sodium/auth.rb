@@ -49,4 +49,7 @@ class Sodium::Auth
   private
 
   def self._key(k)
-    S
+    Sodium::Buffer.new k, self.implementation[:KEYBYTES]
+  end
+
+  def
