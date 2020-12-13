@@ -35,4 +35,8 @@ class Sodium::Auth
   end
 
   def initialize(key)
-   
+    @key = self.class._key(key)
+  end
+
+  def auth(message)
+    self.class.auth(@k
