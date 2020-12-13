@@ -30,4 +30,9 @@ class Sodium::Auth
       authenticator.to_ptr,
       message      .to_ptr,
       message      .bytesize,
-    
+      key          .to_ptr
+    )
+  end
+
+  def initialize(key)
+   
