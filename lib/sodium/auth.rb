@@ -52,4 +52,5 @@ class Sodium::Auth
     Sodium::Buffer.new k, self.implementation[:KEYBYTES]
   end
 
-  def
+  def self._authenticator(a)
+    Sodium::Buffer.new a, self.imp
