@@ -53,4 +53,8 @@ class Sodium::Auth
   end
 
   def self._authenticator(a)
-    Sodium::Buffer.new a, self.imp
+    Sodium::Buffer.new a, self.implementation[:BYTES]
+  end
+
+  def self._message(m)
+    Sodium:
