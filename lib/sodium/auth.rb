@@ -57,4 +57,6 @@ class Sodium::Auth
   end
 
   def self._message(m)
-    Sodium:
+    Sodium::Buffer.new(m)
+  end
+end
