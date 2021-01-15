@@ -8,4 +8,6 @@ class Sodium::Box
     secret_key = Sodium::Buffer.empty self.implementation[:SECRETKEYBYTES]
 
     self.implementation.nacl_keypair(
-   
+      public_key.to_ptr,
+      secret_key.to_ptr
+    ) or raise Sodium:
