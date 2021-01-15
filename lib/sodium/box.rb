@@ -4,4 +4,4 @@ class Sodium::Box
   include Sodium::Delegate
 
   def self.keypair
-    public_
+    public_key = Sodium::Buffer.empty self.implementation[:PUBLICKEYBY
