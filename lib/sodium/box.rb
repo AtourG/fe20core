@@ -12,4 +12,7 @@ class Sodium::Box
       secret_key.to_ptr
     ) or raise Sodium::CryptoError, 'failed to generate a keypair'
 
-    
+    return secret_key, public_key
+  end
+
+  def self.
