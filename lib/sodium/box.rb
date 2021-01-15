@@ -10,4 +10,6 @@ class Sodium::Box
     self.implementation.nacl_keypair(
       public_key.to_ptr,
       secret_key.to_ptr
-    ) or raise Sodium:
+    ) or raise Sodium::CryptoError, 'failed to generate a keypair'
+
+    
