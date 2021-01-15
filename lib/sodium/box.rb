@@ -15,4 +15,5 @@ class Sodium::Box
     return secret_key, public_key
   end
 
-  def self.
+  def self.afternm(shared_key, message, nonce)
+    shared_key = _share
