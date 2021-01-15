@@ -16,4 +16,6 @@ class Sodium::Box
   end
 
   def self.afternm(shared_key, message, nonce)
-    shared_key = _share
+    shared_key = _shared_key(shared_key)
+    message    = _message(message)
+    non
