@@ -27,4 +27,5 @@ class Sodium::Box
         message   .bytesize,
         nonce     .to_ptr,
         shared_key.to_ptr
-      ) or raise Sod
+      ) or raise Sodium::CryptoError, 'failed to close the box'
+    end.ldro
