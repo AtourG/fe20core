@@ -28,4 +28,7 @@ class Sodium::Box
         nonce     .to_ptr,
         shared_key.to_ptr
       ) or raise Sodium::CryptoError, 'failed to close the box'
-    end.ldro
+    end.ldrop self.implementation[:BOXZEROBYTES]
+  end
+
+  def self.open_
