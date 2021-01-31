@@ -31,4 +31,5 @@ class Sodium::Box
     end.ldrop self.implementation[:BOXZEROBYTES]
   end
 
-  def self.open_
+  def self.open_afternm(shared_key, ciphertext, nonce)
+    shared_key = _sh
