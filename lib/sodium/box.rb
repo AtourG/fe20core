@@ -32,4 +32,5 @@ class Sodium::Box
   end
 
   def self.open_afternm(shared_key, ciphertext, nonce)
-    shared_key = _sh
+    shared_key = _shared_key(shared_key)
+    ciphertext = _ciphertext(c
