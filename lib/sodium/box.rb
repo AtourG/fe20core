@@ -43,4 +43,5 @@ class Sodium::Box
         ciphertext.bytesize,
         nonce     .to_ptr,
         shared_key.to_ptr
-      ) or raise Sodium::Cr
+      ) or raise Sodium::CryptoError, 'failed to open the box'
+    end.ldrop self.i
