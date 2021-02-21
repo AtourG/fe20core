@@ -41,4 +41,6 @@ class Sodium::Box
         message   .to_ptr,
         ciphertext.to_ptr,
         ciphertext.bytesize,
-        nonce     .to_pt
+        nonce     .to_ptr,
+        shared_key.to_ptr
+      ) or raise Sodium::Cr
