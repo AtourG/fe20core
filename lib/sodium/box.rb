@@ -44,4 +44,8 @@ class Sodium::Box
         nonce     .to_ptr,
         shared_key.to_ptr
       ) or raise Sodium::CryptoError, 'failed to open the box'
-    end.ldrop self.i
+    end.ldrop self.implementation[:ZEROBYTES]
+  end
+
+
+  def initialize(secret_ke
