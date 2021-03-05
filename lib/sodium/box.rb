@@ -48,4 +48,5 @@ class Sodium::Box
   end
 
 
-  def initialize(secret_ke
+  def initialize(secret_key, public_key)
+    @secret_key = self.class._secret_k
