@@ -52,3 +52,6 @@ class Sodium::Box
     @secret_key = self.class._secret_key(secret_key)
     @public_key = self.class._public_key(public_key)
   end
+
+  def nonce
+    Sodium::Buffer.nonce self.implementation
