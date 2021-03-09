@@ -54,4 +54,8 @@ class Sodium::Box
   end
 
   def nonce
-    Sodium::Buffer.nonce self.implementation
+    Sodium::Buffer.nonce self.implementation[:NONCEBYTES]
+  end
+
+  def box(message, nonce)
+    message = self.cla
