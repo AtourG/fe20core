@@ -58,4 +58,5 @@ class Sodium::Box
   end
 
   def box(message, nonce)
-    message = self.cla
+    message = self.class._message(message)
+    nonce   = self.class._nonce(nonce)
