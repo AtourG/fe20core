@@ -60,3 +60,6 @@ class Sodium::Box
   def box(message, nonce)
     message = self.class._message(message)
     nonce   = self.class._nonce(nonce)
+
+    Sodium::Buffer.empty(message.bytesize) do |ciphertext|
+   
