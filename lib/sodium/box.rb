@@ -64,4 +64,6 @@ class Sodium::Box
     Sodium::Buffer.empty(message.bytesize) do |ciphertext|
       self.implementation.nacl(
         ciphertext .to_ptr,
-        
+        message    .to_ptr,
+        message    .bytesize,
+        nonce
