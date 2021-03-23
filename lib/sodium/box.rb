@@ -66,4 +66,6 @@ class Sodium::Box
         ciphertext .to_ptr,
         message    .to_ptr,
         message    .bytesize,
-        nonce
+        nonce      .to_ptr,
+        @public_key.to_ptr,
+        @
