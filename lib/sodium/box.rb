@@ -68,4 +68,5 @@ class Sodium::Box
         message    .bytesize,
         nonce      .to_ptr,
         @public_key.to_ptr,
-        @
+        @secret_key.to_ptr
+      ) or raise Sodium::CryptoError, 'failed to clos
