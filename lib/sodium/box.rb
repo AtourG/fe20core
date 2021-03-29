@@ -69,4 +69,6 @@ class Sodium::Box
         nonce      .to_ptr,
         @public_key.to_ptr,
         @secret_key.to_ptr
-      ) or raise Sodium::CryptoError, 'failed to clos
+      ) or raise Sodium::CryptoError, 'failed to close the box'
+    end.ldrop self.implementation[:BOXZEROBYTES]
+  
