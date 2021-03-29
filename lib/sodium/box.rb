@@ -71,4 +71,7 @@ class Sodium::Box
         @secret_key.to_ptr
       ) or raise Sodium::CryptoError, 'failed to close the box'
     end.ldrop self.implementation[:BOXZEROBYTES]
-  
+  end
+
+  def open(ciphertext, nonce)
+    ciphertext = self.class._ci
