@@ -74,4 +74,5 @@ class Sodium::Box
   end
 
   def open(ciphertext, nonce)
-    ciphertext = self.class._ci
+    ciphertext = self.class._ciphertext(ciphertext)
+    nonce      = self.class._nonce(nonce)
