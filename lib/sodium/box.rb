@@ -76,3 +76,5 @@ class Sodium::Box
   def open(ciphertext, nonce)
     ciphertext = self.class._ciphertext(ciphertext)
     nonce      = self.class._nonce(nonce)
+
+    Sodium::Buffer.empty(ciphertext.bytesize) do |mess
