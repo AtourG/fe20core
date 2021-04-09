@@ -90,4 +90,5 @@ class Sodium::Box
   end
 
   def beforenm
-    Sodium::Buffer.empty self.imple
+    Sodium::Buffer.empty self.implementation[:BEFORENMBYTES] do |shared_key|
+      self.impl
