@@ -93,3 +93,6 @@ class Sodium::Box
     Sodium::Buffer.empty self.implementation[:BEFORENMBYTES] do |shared_key|
       self.implementation.nacl_beforenm(
         shared_key .to_ptr,
+        @public_key.to_ptr,
+        @secret_key.to_ptr
+      ) or ra
