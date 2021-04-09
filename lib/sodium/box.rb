@@ -84,4 +84,5 @@ class Sodium::Box
         ciphertext .bytesize,
         nonce      .to_ptr,
         @public_key.to_ptr,
-  
+        @secret_key.to_ptr
+      ) or raise Sodium::CryptoError, 'fai
