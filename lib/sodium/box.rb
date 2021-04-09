@@ -81,4 +81,7 @@ class Sodium::Box
       self.implementation.nacl_open(
         message    .to_ptr,
         ciphertext .to_ptr,
-        ciphertext .byt
+        ciphertext .bytesize,
+        nonce      .to_ptr,
+        @public_key.to_ptr,
+  
