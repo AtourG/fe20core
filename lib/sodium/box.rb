@@ -91,4 +91,5 @@ class Sodium::Box
 
   def beforenm
     Sodium::Buffer.empty self.implementation[:BEFORENMBYTES] do |shared_key|
-      self.impl
+      self.implementation.nacl_beforenm(
+        shared_key .to_ptr,
