@@ -86,4 +86,8 @@ class Sodium::Box
         @public_key.to_ptr,
         @secret_key.to_ptr
       ) or raise Sodium::CryptoError, 'failed to open the box'
-    end.ldrop self.implementation[:ZEROBYTE
+    end.ldrop self.implementation[:ZEROBYTES]
+  end
+
+  def beforenm
+    Sodium::Buffer.empty self.imple
