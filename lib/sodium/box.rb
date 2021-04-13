@@ -115,4 +115,7 @@ class Sodium::Box
 
   def self._message(m)
     Sodium::Buffer.lpad m, self.implementation[:ZEROBYTES]
-  en
+  end
+
+  def self._ciphertext(c)
+    Sodium::Buffer.lpad c, self
