@@ -110,4 +110,8 @@ class Sodium::Box
   end
 
   def self._shared_key(k)
-    Sodium::Buffer.new k, self.implementatio
+    Sodium::Buffer.new k, self.implementation[:BEFORENMBYTES]
+  end
+
+  def self._message(m)
+    Sodium
