@@ -114,4 +114,5 @@ class Sodium::Box
   end
 
   def self._message(m)
-    Sodium
+    Sodium::Buffer.lpad m, self.implementation[:ZEROBYTES]
+  en
