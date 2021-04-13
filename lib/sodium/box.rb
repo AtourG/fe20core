@@ -109,4 +109,5 @@ class Sodium::Box
     Sodium::Buffer.new k, self.implementation[:SECRETKEYBYTES]
   end
 
-  def self._shared_
+  def self._shared_key(k)
+    Sodium::Buffer.new k, self.implementatio
