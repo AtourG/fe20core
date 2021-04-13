@@ -99,4 +99,7 @@ class Sodium::Box
     end
   end
 
-  pr
+  private
+
+  def self._public_key(k)
+    Sodium::Buffer.ne
