@@ -95,4 +95,8 @@ class Sodium::Box
         shared_key .to_ptr,
         @public_key.to_ptr,
         @secret_key.to_ptr
-      ) or ra
+      ) or raise Sodium::CryptoError, 'failed to create a shared key'
+    end
+  end
+
+  pr
