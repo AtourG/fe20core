@@ -102,4 +102,7 @@ class Sodium::Box
   private
 
   def self._public_key(k)
-    Sodium::Buffer.ne
+    Sodium::Buffer.new k, self.implementation[:PUBLICKEYBYTES]
+  end
+
+  def self._s
