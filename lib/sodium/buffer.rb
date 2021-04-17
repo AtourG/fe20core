@@ -11,4 +11,7 @@ class Sodium::Buffer
   end
 
   def self.empty(size)
-    self.new("\0" * size).
+    self.new("\0" * size).tap {|buffer| yield buffer if block_given? }
+  end
+
+  def self.ljust(strin
