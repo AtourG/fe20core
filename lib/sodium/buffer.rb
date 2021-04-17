@@ -1,4 +1,6 @@
 require 'sodium'
 require 'securerandom'
 
-class 
+class Sodium::Buffer
+  def self.key(size)
+    Sodium::Random.bytes(si
