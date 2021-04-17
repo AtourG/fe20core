@@ -118,4 +118,8 @@ class Sodium::Box
   end
 
   def self._ciphertext(c)
-    Sodium::Buffer.lpad c, self
+    Sodium::Buffer.lpad c, self.implementation[:BOXZEROBYTES]
+  end
+
+  def self._nonce(n)
+    Sodium:
