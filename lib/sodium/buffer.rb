@@ -7,4 +7,8 @@ class Sodium::Buffer
   end
 
   def self.nonce(size)
-    Sodium::Random.bytes(
+    Sodium::Random.bytes(size)
+  end
+
+  def self.empty(size)
+    self.new("\0" * size).
