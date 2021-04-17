@@ -123,3 +123,5 @@ class Sodium::Box
 
   def self._nonce(n)
     Sodium::Buffer.new n, self.implementation[:NONCEBYTES]
+  end
+end
