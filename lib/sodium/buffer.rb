@@ -14,4 +14,5 @@ class Sodium::Buffer
     self.new("\0" * size).tap {|buffer| yield buffer if block_given? }
   end
 
-  def self.ljust(strin
+  def self.ljust(string, size)
+    size = (size > string.bytesize) ? size : s
