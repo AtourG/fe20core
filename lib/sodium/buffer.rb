@@ -23,4 +23,7 @@ class Sodium::Buffer
   end
 
   def self.rjust(string, size)
-    size = (size > string.bytesize) ? size
+    size = (size > string.bytesize) ? size : string.bytesize
+
+    self.empty(size) do |buffer|
+      buffer[size - s
