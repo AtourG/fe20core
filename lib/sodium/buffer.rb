@@ -26,4 +26,8 @@ class Sodium::Buffer
     size = (size > string.bytesize) ? size : string.bytesize
 
     self.empty(size) do |buffer|
-      buffer[size - s
+      buffer[size - string.bytesize, string.bytesize] = string
+    end
+  end
+
+  de
