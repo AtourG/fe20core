@@ -22,4 +22,5 @@ class Sodium::Buffer
     end
   end
 
-  def self
+  def self.rjust(string, size)
+    size = (size > string.bytesize) ? size
