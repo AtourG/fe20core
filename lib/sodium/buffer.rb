@@ -18,4 +18,8 @@ class Sodium::Buffer
     size = (size > string.bytesize) ? size : string.bytesize
 
     self.empty(size) do |buffer|
-     
+      buffer[0, string.bytesize] = string
+    end
+  end
+
+  def self
