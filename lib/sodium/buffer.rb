@@ -31,4 +31,7 @@ class Sodium::Buffer
   end
 
   def self.lpad(string, size, &block)
-    self.rjust(string
+    self.rjust(string, string.bytesize + size, &block)
+  end
+
+  def self.rpad(string, size, 
