@@ -30,4 +30,5 @@ class Sodium::Buffer
     end
   end
 
-  de
+  def self.lpad(string, size, &block)
+    self.rjust(string
