@@ -40,3 +40,7 @@ class Sodium::Buffer
 
   def self.new(bytes, size = bytes.bytesize)
     raise Sodium::LengthError, "buffer must be exactly #{size} bytes long" unless
+      bytes.bytesize == size
+
+    bytes.kind_of?(self) ?
+      bytes  
