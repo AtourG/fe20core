@@ -39,4 +39,4 @@ class Sodium::Buffer
   end
 
   def self.new(bytes, size = bytes.bytesize)
-    raise Sodium::L
+    raise Sodium::LengthError, "buffer must be exactly #{size} bytes long" unless
