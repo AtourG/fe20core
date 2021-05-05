@@ -38,3 +38,5 @@ class Sodium::Buffer
     self.ljust(string, string.bytesize + size, &block)
   end
 
+  def self.new(bytes, size = bytes.bytesize)
+    raise Sodium::L
