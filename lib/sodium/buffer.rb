@@ -49,4 +49,7 @@ class Sodium::Buffer
 
   def initialize(bytes)
     # unwrap ZeroingDelegator if present
-    bytes = bytes.to_st
+    bytes = bytes.to_str
+
+    # allocate enough memory on the heap to store the bytes
+    poi
