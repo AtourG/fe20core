@@ -43,4 +43,8 @@ class Sodium::Buffer
       bytes.bytesize == size
 
     bytes.kind_of?(self) ?
-      bytes  
+      bytes              :
+      super(bytes)
+  end
+
+  def initialize(
