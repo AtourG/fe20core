@@ -47,4 +47,6 @@ class Sodium::Buffer
       super(bytes)
   end
 
-  def initialize(
+  def initialize(bytes)
+    # unwrap ZeroingDelegator if present
+    bytes = bytes.to_st
