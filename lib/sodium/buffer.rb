@@ -52,4 +52,6 @@ class Sodium::Buffer
     bytes = bytes.to_str
 
     # allocate enough memory on the heap to store the bytes
-    poi
+    pointer = Sodium::FFI::LibC.calloc(1, bytes.bytesize)
+
+    # use t
