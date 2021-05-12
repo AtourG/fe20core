@@ -54,4 +54,5 @@ class Sodium::Buffer
     # allocate enough memory on the heap to store the bytes
     pointer = Sodium::FFI::LibC.calloc(1, bytes.bytesize)
 
-    # use t
+    # use the ZeroingDelegator helper methods to prevent the pointer
+ 
