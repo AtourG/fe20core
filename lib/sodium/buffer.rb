@@ -55,4 +55,4 @@ class Sodium::Buffer
     pointer = Sodium::FFI::LibC.calloc(1, bytes.bytesize)
 
     # use the ZeroingDelegator helper methods to prevent the pointer
- 
+    # from being swapped to disk, to wipe its memory on gar
