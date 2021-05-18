@@ -57,4 +57,5 @@ class Sodium::Buffer
     # use the ZeroingDelegator helper methods to prevent the pointer
     # from being swapped to disk, to wipe its memory on garbage
     # collection, and to attach our own finalizer to free() the memory
-    # on garbage collection as 
+    # on garbage collection as well
+    ZeroingDelegator._mlock!          pointer, 
