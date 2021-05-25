@@ -59,4 +59,5 @@ class Sodium::Buffer
     # collection, and to attach our own finalizer to free() the memory
     # on garbage collection as well
     ZeroingDelegator._mlock!          pointer, bytes.bytesize
-    ZeroingDelegator._finalize! sel
+    ZeroingDelegator._finalize! self, pointer, bytes.bytesize,
+      &self.class._finalizer(
