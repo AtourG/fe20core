@@ -60,4 +60,6 @@ class Sodium::Buffer
     # on garbage collection as well
     ZeroingDelegator._mlock!          pointer, bytes.bytesize
     ZeroingDelegator._finalize! self, pointer, bytes.bytesize,
-      &self.class._finalizer(
+      &self.class._finalizer(pointer, bytes.bytesize)
+
+    # now that the pointer can't 
