@@ -64,4 +64,6 @@ class Sodium::Buffer
 
     # now that the pointer can't be swapped out to disk, it is safe to
     # write memory contents to it
-    p
+    pointer.write_string(bytes)
+
+    # zero out the bytes passed
