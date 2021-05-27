@@ -66,4 +66,5 @@ class Sodium::Buffer
     # write memory contents to it
     pointer.write_string(bytes)
 
-    # zero out the bytes passed
+    # zero out the bytes passed to us, since we can't control their
+    # lifecyc
