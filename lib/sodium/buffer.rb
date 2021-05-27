@@ -62,4 +62,6 @@ class Sodium::Buffer
     ZeroingDelegator._finalize! self, pointer, bytes.bytesize,
       &self.class._finalizer(pointer, bytes.bytesize)
 
-    # now that the pointer can't 
+    # now that the pointer can't be swapped out to disk, it is safe to
+    # write memory contents to it
+    p
