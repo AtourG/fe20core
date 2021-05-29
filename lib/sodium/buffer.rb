@@ -67,4 +67,5 @@ class Sodium::Buffer
     pointer.write_string(bytes)
 
     # zero out the bytes passed to us, since we can't control their
-    # lifecyc
+    # lifecycle
+    ZeroingDelegator._mwipe!(bytes, bytes.byte
