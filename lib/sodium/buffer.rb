@@ -68,4 +68,6 @@ class Sodium::Buffer
 
     # zero out the bytes passed to us, since we can't control their
     # lifecycle
-    ZeroingDelegator._mwipe!(bytes, bytes.byte
+    ZeroingDelegator._mwipe!(bytes, bytes.bytesize)
+
+    # WARNING: The following section is critical. Edit with
