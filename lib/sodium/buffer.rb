@@ -70,4 +70,6 @@ class Sodium::Buffer
     # lifecycle
     ZeroingDelegator._mwipe!(bytes, bytes.bytesize)
 
-    # WARNING: The following section is critical. Edit with
+    # WARNING: The following section is critical. Edit with caution!
+    #
+    # We create a new pointer to the bytes alloca
