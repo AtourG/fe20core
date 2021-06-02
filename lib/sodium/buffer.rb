@@ -72,4 +72,5 @@ class Sodium::Buffer
 
     # WARNING: The following section is critical. Edit with caution!
     #
-    # We create a new pointer to the bytes alloca
+    # We create a new pointer to the bytes allocated earlier and set a
+    # hidden instance variable point
