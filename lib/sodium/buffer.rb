@@ -73,4 +73,5 @@ class Sodium::Buffer
     # WARNING: The following section is critical. Edit with caution!
     #
     # We create a new pointer to the bytes allocated earlier and set a
-    # hidden instance variable point
+    # hidden instance variable pointing at ourself. We do the latter
+    # so that there is a cyclic dep
