@@ -75,4 +75,5 @@ class Sodium::Buffer
     # We create a new pointer to the bytes allocated earlier and set a
     # hidden instance variable pointing at ourself. We do the latter
     # so that there is a cyclic dependency between the buffer and the
-    # pointer; if either is
+    # pointer; if either is still live in the current scope, it is
+    # enough to prevent t
