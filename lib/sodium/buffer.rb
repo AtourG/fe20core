@@ -77,4 +77,5 @@ class Sodium::Buffer
     # so that there is a cyclic dependency between the buffer and the
     # pointer; if either is still live in the current scope, it is
     # enough to prevent the other from being collected. We create the
-    # new pointer since
+    # new pointer since the existing pointer is referenced by the
+    # f
