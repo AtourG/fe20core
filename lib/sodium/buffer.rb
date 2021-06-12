@@ -78,4 +78,5 @@ class Sodium::Buffer
     # pointer; if either is still live in the current scope, it is
     # enough to prevent the other from being collected. We create the
     # new pointer since the existing pointer is referenced by the
-    # finalizer; if we didn't, its reference in the finalizer pr
+    # finalizer; if we didn't, its reference in the finalizer proc
+    # would keep us from being garbage collected because it
