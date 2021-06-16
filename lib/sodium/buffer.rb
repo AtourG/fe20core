@@ -85,4 +85,9 @@ class Sodium::Buffer
     @bytes    = FFI::Pointer.new(pointer.address)
     @bytes.instance_variable_set(:@_sodium_buffer, self)
 
-    @bytes.fre
+    @bytes.freeze
+    self  .freeze
+  end
+
+  def ==(bytes)
+    self.to_s ==
