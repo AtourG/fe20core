@@ -82,4 +82,5 @@ class Sodium::Buffer
     # would keep us from being garbage collected because it holds a
     # pointer to us.
     @bytesize = bytes.bytesize
-   
+    @bytes    = FFI::Pointer.new(pointer.address)
+    @bytes
