@@ -79,4 +79,7 @@ class Sodium::Buffer
     # enough to prevent the other from being collected. We create the
     # new pointer since the existing pointer is referenced by the
     # finalizer; if we didn't, its reference in the finalizer proc
-    # would keep us from being garbage collected because it
+    # would keep us from being garbage collected because it holds a
+    # pointer to us.
+    @bytesize = bytes.bytesize
+   
