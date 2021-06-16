@@ -83,4 +83,6 @@ class Sodium::Buffer
     # pointer to us.
     @bytesize = bytes.bytesize
     @bytes    = FFI::Pointer.new(pointer.address)
-    @bytes
+    @bytes.instance_variable_set(:@_sodium_buffer, self)
+
+    @bytes.fre
