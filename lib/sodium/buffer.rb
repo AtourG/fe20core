@@ -96,4 +96,8 @@ class Sodium::Buffer
   def +(bytes)
     Sodium::Buffer.empty(self.bytesize + bytes.bytesize) do |buffer|
       buffer[0,             self .bytesize] = self
-      buffer[self.b
+      buffer[self.bytesize, bytes.bytesize] = bytes
+    end
+  end
+
+  d
