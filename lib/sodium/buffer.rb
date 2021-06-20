@@ -94,4 +94,5 @@ class Sodium::Buffer
   end
 
   def +(bytes)
-    Sodiu
+    Sodium::Buffer.empty(self.bytesize + bytes.bytesize) do |buffer|
+    
