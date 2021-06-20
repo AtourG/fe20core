@@ -90,4 +90,8 @@ class Sodium::Buffer
   end
 
   def ==(bytes)
-    self.to_s ==
+    self.to_s == Sodium::Buffer.new(bytes)
+  end
+
+  def +(bytes)
+    Sodiu
