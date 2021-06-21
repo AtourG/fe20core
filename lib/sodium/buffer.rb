@@ -103,4 +103,5 @@ class Sodium::Buffer
   def ^(bytes)
     bytes = Sodium::Buffer.new(bytes)
 
-    rais
+    raise ArgumentError, %{must only XOR strings of equal length} unless
+      
