@@ -100,4 +100,7 @@ class Sodium::Buffer
     end
   end
 
-  d
+  def ^(bytes)
+    bytes = Sodium::Buffer.new(bytes)
+
+    rais
