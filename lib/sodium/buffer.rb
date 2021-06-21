@@ -104,4 +104,6 @@ class Sodium::Buffer
     bytes = Sodium::Buffer.new(bytes)
 
     raise ArgumentError, %{must only XOR strings of equal length} unless
-      
+      self.bytesize == bytes.bytesize
+
+    Sodium::Buffer.empty(
