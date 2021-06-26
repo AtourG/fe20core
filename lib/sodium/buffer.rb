@@ -106,4 +106,5 @@ class Sodium::Buffer
     raise ArgumentError, %{must only XOR strings of equal length} unless
       self.bytesize == bytes.bytesize
 
-    Sodium::Buffer.empty(
+    Sodium::Buffer.empty(self.bytesize) do |buffer|
+      Sodium::FFI::Memory.sodium_
