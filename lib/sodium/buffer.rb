@@ -107,4 +107,7 @@ class Sodium::Buffer
       self.bytesize == bytes.bytesize
 
     Sodium::Buffer.empty(self.bytesize) do |buffer|
-      Sodium::FFI::Memory.sodium_
+      Sodium::FFI::Memory.sodium_memxor(
+        buffer.to_ptr,
+        self  .to_ptr,
+        bytes
