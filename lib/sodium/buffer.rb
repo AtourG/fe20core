@@ -110,4 +110,7 @@ class Sodium::Buffer
       Sodium::FFI::Memory.sodium_memxor(
         buffer.to_ptr,
         self  .to_ptr,
-        bytes
+        bytes .to_ptr,
+        bytes .bytesize
+      )
+    en
