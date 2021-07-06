@@ -113,4 +113,8 @@ class Sodium::Buffer
         bytes .to_ptr,
         bytes .bytesize
       )
-    en
+    end
+  end
+
+  def []=(offset, size, bytes)
+    raise ArgumentError, %{must 
