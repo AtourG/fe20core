@@ -118,4 +118,6 @@ class Sodium::Buffer
 
   def []=(offset, size, bytes)
     raise ArgumentError, %{must only assign to existing bytes in the buffer} unless
-      sel
+      self.bytesize >= offset + size
+
+    raise ArgumentError, %{must rea
