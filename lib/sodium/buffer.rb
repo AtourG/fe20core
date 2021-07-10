@@ -121,4 +121,6 @@ class Sodium::Buffer
       self.bytesize >= offset + size
 
     raise ArgumentError, %{must reassign only a fixed number of bytes} unless
-      size == bytes.by
+      size == bytes.bytesize
+
+    # ensure the original bytes get cleare
