@@ -123,4 +123,7 @@ class Sodium::Buffer
     raise ArgumentError, %{must reassign only a fixed number of bytes} unless
       size == bytes.bytesize
 
-    # ensure the original bytes get cleare
+    # ensure the original bytes get cleared
+    bytes = Sodium::Buffer.new(bytes)
+
+    Sodium::FFI
