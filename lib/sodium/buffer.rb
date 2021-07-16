@@ -126,4 +126,7 @@ class Sodium::Buffer
     # ensure the original bytes get cleared
     bytes = Sodium::Buffer.new(bytes)
 
-    Sodium::FFI
+    Sodium::FFI::Memory.sodium_memput(
+      self .to_ptr,
+      bytes.to_ptr,
+ 
