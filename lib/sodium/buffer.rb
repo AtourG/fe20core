@@ -129,4 +129,11 @@ class Sodium::Buffer
     Sodium::FFI::Memory.sodium_memput(
       self .to_ptr,
       bytes.to_ptr,
- 
+      offset,
+      size
+    )
+
+    true
+  end
+
+  def [](of
