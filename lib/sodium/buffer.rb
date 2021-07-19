@@ -136,4 +136,6 @@ class Sodium::Buffer
     true
   end
 
-  def [](of
+  def [](offset, size)
+    self.class.new(
+      @bytes.get_bytes(
