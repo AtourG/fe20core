@@ -138,4 +138,8 @@ class Sodium::Buffer
 
   def [](offset, size)
     self.class.new(
-      @bytes.get_bytes(
+      @bytes.get_bytes(offset, size)
+    )
+  end
+
+  alias byteslic
