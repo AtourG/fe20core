@@ -148,4 +148,9 @@ class Sodium::Buffer
     @bytesize
   end
 
-  def rdrop(siz
+  def rdrop(size)
+    self[0, self.bytesize - size]
+  end
+
+  def ldrop(size)
+   
