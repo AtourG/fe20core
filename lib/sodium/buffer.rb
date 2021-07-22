@@ -142,4 +142,10 @@ class Sodium::Buffer
     )
   end
 
-  alias byteslic
+  alias byteslice []
+
+  def bytesize
+    @bytesize
+  end
+
+  def rdrop(siz
