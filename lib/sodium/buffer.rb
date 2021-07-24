@@ -153,4 +153,8 @@ class Sodium::Buffer
   end
 
   def ldrop(size)
-   
+    self[size, self.bytesize - size]
+  end
+
+  def inspect
+    # this appears
