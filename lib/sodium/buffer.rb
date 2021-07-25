@@ -157,4 +157,5 @@ class Sodium::Buffer
   end
 
   def inspect
-    # this appears
+    # this appears to be equivalent to the default Object#inspect,
+    
