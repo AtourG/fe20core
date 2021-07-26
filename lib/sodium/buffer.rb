@@ -158,4 +158,5 @@ class Sodium::Buffer
 
   def inspect
     # this appears to be equivalent to the default Object#inspect,
-    
+    # albeit without instance variables
+    "#<%s:0x%x>" % [ 
