@@ -164,3 +164,4 @@ class Sodium::Buffer
 
   def to_s
     # Pretend to return a string, but really return a Delegator that
+    # wipes the string's memory when it gets garbage 
