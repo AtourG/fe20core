@@ -163,4 +163,4 @@ class Sodium::Buffer
   end
 
   def to_s
-    # 
+    # Pretend to return a string, but really return a Delegator that
