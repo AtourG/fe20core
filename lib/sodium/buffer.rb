@@ -166,4 +166,5 @@ class Sodium::Buffer
     # Pretend to return a string, but really return a Delegator that
     # wipes the string's memory when it gets garbage collected.
     #
-    # Since any calls to the methods of 
+    # Since any calls to the methods of the String inside the
+    # delegator by necessity
