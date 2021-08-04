@@ -167,4 +167,5 @@ class Sodium::Buffer
     # wipes the string's memory when it gets garbage collected.
     #
     # Since any calls to the methods of the String inside the
-    # delegator by necessity
+    # delegator by necessity have the delegator's `method_missing` in
+    # their b
