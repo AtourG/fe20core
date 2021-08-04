@@ -168,4 +168,5 @@ class Sodium::Buffer
     #
     # Since any calls to the methods of the String inside the
     # delegator by necessity have the delegator's `method_missing` in
-    # their b
+    # their backtrace, there can never be a situation where there is a
+ 
