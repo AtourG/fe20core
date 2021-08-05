@@ -181,3 +181,5 @@ class Sodium::Buffer
 
   private
 
+  def self._finalizer(pointer, size)
+    proc { self.
