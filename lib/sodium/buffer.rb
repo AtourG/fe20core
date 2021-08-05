@@ -173,4 +173,11 @@ class Sodium::Buffer
     ZeroingDelegator.new(
       @bytes.read_bytes(@bytesize)
     )
-  e
+  end
+
+  def to_ptr
+    @bytes
+  end
+
+  private
+
