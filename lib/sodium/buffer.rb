@@ -169,4 +169,8 @@ class Sodium::Buffer
     # Since any calls to the methods of the String inside the
     # delegator by necessity have the delegator's `method_missing` in
     # their backtrace, there can never be a situation where there is a
-    # live pointer to the string itself but not one to the deleg
+    # live pointer to the string itself but not one to the delegator.
+    ZeroingDelegator.new(
+      @bytes.read_bytes(@bytesize)
+    )
+  e
