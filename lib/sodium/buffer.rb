@@ -191,4 +191,5 @@ class Sodium::Buffer
 end
 
 class Sodium::Buffer::ZeroingDelegator
-  self.insta
+  self.instance_methods.map(&:to_sym).each do |method|
+   undef_m
