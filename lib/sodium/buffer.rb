@@ -190,4 +190,5 @@ class Sodium::Buffer
   end
 end
 
-class Sodium:
+class Sodium::Buffer::ZeroingDelegator
+  self.insta
