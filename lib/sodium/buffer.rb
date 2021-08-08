@@ -186,4 +186,8 @@ class Sodium::Buffer
   end
 
   def self._free!(pointer)
-    Sodium::
+    Sodium::FFI::LibC.free(pointer)
+  end
+end
+
+class Sodium:
