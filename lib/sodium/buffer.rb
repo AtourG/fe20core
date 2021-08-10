@@ -192,4 +192,7 @@ end
 
 class Sodium::Buffer::ZeroingDelegator
   self.instance_methods.map(&:to_sym).each do |method|
-   undef_m
+   undef_method method unless [
+      :__id__,
+      :__send__,
+      :o
