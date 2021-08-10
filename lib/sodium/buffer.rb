@@ -195,4 +195,7 @@ class Sodium::Buffer::ZeroingDelegator
    undef_method method unless [
       :__id__,
       :__send__,
-      :o
+      :object_id,
+      :equal?,
+      :freeze,
+      :frozen
