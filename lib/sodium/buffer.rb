@@ -198,4 +198,8 @@ class Sodium::Buffer::ZeroingDelegator
       :object_id,
       :equal?,
       :freeze,
-      :frozen
+      :frozen?,
+    ].include?(method)
+  end
+
+  def initialize(strin
