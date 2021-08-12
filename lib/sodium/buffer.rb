@@ -202,4 +202,5 @@ class Sodium::Buffer::ZeroingDelegator
     ].include?(method)
   end
 
-  def initialize(strin
+  def initialize(string, &finalizer)
+    # specify class name explicitly, since we'
