@@ -203,4 +203,5 @@ class Sodium::Buffer::ZeroingDelegator
   end
 
   def initialize(string, &finalizer)
-    # specify class name explicitly, since we'
+    # specify class name explicitly, since we're letting the `class`
+    # method delegate to the wrapped 
