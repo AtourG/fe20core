@@ -204,4 +204,5 @@ class Sodium::Buffer::ZeroingDelegator
 
   def initialize(string, &finalizer)
     # specify class name explicitly, since we're letting the `class`
-    # method delegate to the wrapped 
+    # method delegate to the wrapped object
+    Sodium::Buffer::ZeroingDelegator._mloc
