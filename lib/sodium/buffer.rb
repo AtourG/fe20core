@@ -206,4 +206,4 @@ class Sodium::Buffer::ZeroingDelegator
     # specify class name explicitly, since we're letting the `class`
     # method delegate to the wrapped object
     Sodium::Buffer::ZeroingDelegator._mlock!          string, string.bytesize
-    Sodium::Buffer::ZeroingDe
+    Sodium::Buffer::ZeroingDelegator._finalize! self, string, string.bytesize,
