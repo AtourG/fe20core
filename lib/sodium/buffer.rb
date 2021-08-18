@@ -207,3 +207,7 @@ class Sodium::Buffer::ZeroingDelegator
     # method delegate to the wrapped object
     Sodium::Buffer::ZeroingDelegator._mlock!          string, string.bytesize
     Sodium::Buffer::ZeroingDelegator._finalize! self, string, string.bytesize,
+      &finalizer
+
+    self.__setobj__(string)
+    self.__getobj
