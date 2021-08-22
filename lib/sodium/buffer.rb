@@ -210,4 +210,9 @@ class Sodium::Buffer::ZeroingDelegator
       &finalizer
 
     self.__setobj__(string)
-    self.__getobj
+    self.__getobj__.freeze
+    self           .freeze
+  end
+
+  def ==(other)
+    retur
