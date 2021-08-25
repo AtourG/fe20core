@@ -217,3 +217,6 @@ class Sodium::Buffer::ZeroingDelegator
   def ==(other)
     return false unless
       self.bytesize == other.bytesize
+
+    Sodium::FFI::Crypto.sodium_memcmp(
+      self.
