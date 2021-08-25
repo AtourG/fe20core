@@ -223,4 +223,11 @@ class Sodium::Buffer::ZeroingDelegator
       other,
       other.bytesize
     ) == 0
- 
+  end
+
+  def to_s
+    self
+  end
+
+  def to_str
+    # O
