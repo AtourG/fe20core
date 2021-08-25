@@ -219,4 +219,8 @@ class Sodium::Buffer::ZeroingDelegator
       self.bytesize == other.bytesize
 
     Sodium::FFI::Crypto.sodium_memcmp(
-      self.
+      self.__getobj__,
+      other,
+      other.bytesize
+    ) == 0
+ 
