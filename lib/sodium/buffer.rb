@@ -215,4 +215,5 @@ class Sodium::Buffer::ZeroingDelegator
   end
 
   def ==(other)
-    retur
+    return false unless
+      self.bytesize == other.bytesize
