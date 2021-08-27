@@ -230,4 +230,5 @@ class Sodium::Buffer::ZeroingDelegator
   end
 
   def to_str
-    # O
+    # Okay, fine, you win. I'll give you access to the raw string
+    #
