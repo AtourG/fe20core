@@ -232,4 +232,6 @@ class Sodium::Buffer::ZeroingDelegator
   def to_str
     # Okay, fine, you win. I'll give you access to the raw string
     # we're wrapping. But now I can't wipe the data when you're done
-    # wit
+    # with it.
+    self.__getobj__.
+      tr('', ''). # trick to fo
