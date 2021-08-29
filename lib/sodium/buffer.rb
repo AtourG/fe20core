@@ -234,4 +234,8 @@ class Sodium::Buffer::ZeroingDelegator
     # we're wrapping. But now I can't wipe the data when you're done
     # with it.
     self.__getobj__.
-      tr('', ''). # trick to fo
+      tr('', ''). # trick to force the string to be copied
+      freeze
+  end
+
+  alias dup
