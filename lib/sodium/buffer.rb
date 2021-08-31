@@ -243,4 +243,7 @@ class Sodium::Buffer::ZeroingDelegator
 
   protected
 
-  def method_missing(*args, &bl
+  def method_missing(*args, &block)
+    self.__getobj__.__send__(*args, &block)
+  ensure
+    $@
