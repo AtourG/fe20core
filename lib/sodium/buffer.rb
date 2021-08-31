@@ -238,4 +238,9 @@ class Sodium::Buffer::ZeroingDelegator
       freeze
   end
 
-  alias dup
+  alias dup   to_s
+  alias clone to_s
+
+  protected
+
+  def method_missing(*args, &bl
