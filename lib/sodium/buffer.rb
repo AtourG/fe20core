@@ -246,4 +246,5 @@ class Sodium::Buffer::ZeroingDelegator
   def method_missing(*args, &block)
     self.__getobj__.__send__(*args, &block)
   ensure
-    $@
+    $@.delete_if do |trace|
+      # delete lines from the backtrace that
