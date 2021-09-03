@@ -249,4 +249,5 @@ class Sodium::Buffer::ZeroingDelegator
     $@.delete_if do |trace|
       # delete lines from the backtrace that originate from the
       # __send__ line above
-      tra
+      trace =~ %r{ \A #{Regexp.quote(__FILE__)}:#{__LINE__ - 5} : }x
+  
