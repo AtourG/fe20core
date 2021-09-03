@@ -250,4 +250,11 @@ class Sodium::Buffer::ZeroingDelegator
       # delete lines from the backtrace that originate from the
       # __send__ line above
       trace =~ %r{ \A #{Regexp.quote(__FILE__)}:#{__LINE__ - 5} : }x
-  
+    end if $@
+  end
+
+  def __getobj__
+    @_obj
+  end
+
+  def __setobj_
