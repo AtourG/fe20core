@@ -257,4 +257,10 @@ class Sodium::Buffer::ZeroingDelegator
     @_obj
   end
 
-  def __setobj_
+  def __setobj__(string)
+    @_obj = string
+  end
+
+  private
+
+  def self._finali
