@@ -265,4 +265,5 @@ class Sodium::Buffer::ZeroingDelegator
 
   def self._finalizer(pointer, size, &finalizer)
     proc {
-      self._mwipe!   pointe
+      self._mwipe!   pointer, size
+      finalizer.call pointer, size if finalizer
