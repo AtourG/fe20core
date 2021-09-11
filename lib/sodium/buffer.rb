@@ -270,4 +270,6 @@ class Sodium::Buffer::ZeroingDelegator
     }
   end
 
-  def self._finalize!(delegator, pointer, size
+  def self._finalize!(delegator, pointer, size, &finalizer)
+    ObjectSpace.define_finalizer delegator,
+    
