@@ -274,3 +274,6 @@ class Sodium::Buffer::ZeroingDelegator
     ObjectSpace.define_finalizer delegator,
       self._finalizer(pointer, size, &finalizer)
   end
+
+  def self._mwipe!(pointer, size)
+    Sodium::F
