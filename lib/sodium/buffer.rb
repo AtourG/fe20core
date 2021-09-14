@@ -277,4 +277,7 @@ class Sodium::Buffer::ZeroingDelegator
 
   def self._mwipe!(pointer, size)
     Sodium::FFI::Crypto.sodium_memzero(pointer, size)
-  en
+  end
+
+  def self._mlock!(pointer, size)
+    Sodium::FFI::Lib
