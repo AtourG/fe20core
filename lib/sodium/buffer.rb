@@ -280,4 +280,5 @@ class Sodium::Buffer::ZeroingDelegator
   end
 
   def self._mlock!(pointer, size)
-    Sodium::FFI::Lib
+    Sodium::FFI::LibC.mlock(pointer, size) or
+      raise Sodium::MemoryError, 'could n
