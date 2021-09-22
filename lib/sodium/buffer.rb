@@ -281,4 +281,6 @@ class Sodium::Buffer::ZeroingDelegator
 
   def self._mlock!(pointer, size)
     Sodium::FFI::LibC.mlock(pointer, size) or
-      raise Sodium::MemoryError, 'could n
+      raise Sodium::MemoryError, 'could not mlock(2) secure buffer into memory'
+  end
+end
