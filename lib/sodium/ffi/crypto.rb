@@ -59,3 +59,50 @@ module Sodium::FFI::Crypto
     methods.each do |name, arguments|
       _install_function(subclass, family, primitive, name, arguments, &:zero?)
     end
+  end
+
+  def self._install_function(subclass, family, primitive, name, arguments, &converter)
+    imp       = [ family, primitive, name ].compact.join('_').downcase
+    meth      = [ 'nacl',            name ].compact.join('_').downcase
+    arguments = arguments.map(&:to_sym)
+
+    self.attach_function imp, arguments[0..-2], arguments.last
+    self.attach_method   imp, self, subclass, meth, &converter
+
+    meth
+  end
+
+  def self.attach_method(implementation, nacl, delegate, method)
+    self._metaclass(delegate).send :define_method, method do |*a, &b|
+      value = nacl.send(implementation, *a, &b)
+      block_given? ? yield(value) : value
+    end
+  end
+
+  def self._load_class(name)
+    name.split('::').inject(Object) {|klass, part| klass.const_get(part) }
+  end
+
+  def self._metaclass(klass)
+    (class << klass; self; end)
+  end
+end
+
+module Sodium::FFI::Crypto
+  extend FFI::Library
+
+  ffi_lib 'sodium'
+
+  attach_function 'sodium_init',    [],                            :void
+  attach_function 'sodium_memzero', [:pointer, :size_t],           :void
+  attach_function 'sodium_memcmp',  [:pointer, :pointer, :size_t], :int
+
+  sodium_init
+
+  CONFIG.each do |configuration|
+    delegate = self._load_class configuration[:class]
+
+    self._install_default    delegate, configuration
+    self._install_primitives delegate, configuration
+  end
+end
