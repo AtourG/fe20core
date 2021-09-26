@@ -3,4 +3,6 @@ require 'sodium/ffi'
 module Sodium::FFI::LibC
   extend FFI::Library
 
-  ffi_lib FFI::Libra
+  ffi_lib FFI::Library::LIBC
+
+  attach_function 'calloc', [:size_t, :size_t], :p
