@@ -5,4 +5,5 @@ module Sodium::FFI::LibC
 
   ffi_lib FFI::Library::LIBC
 
-  attach_function 'calloc', [:size_t, :size_t], :p
+  attach_function 'calloc', [:size_t, :size_t], :pointer
+  attach_function 'free',   [:pointer],         :vo
