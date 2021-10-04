@@ -9,4 +9,4 @@ module Sodium::FFI::LibC
   attach_function 'free',   [:pointer],         :void
 
   attach_function 'mlock', [:pointer, :size_t], :int
-en
+end
