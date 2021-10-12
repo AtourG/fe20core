@@ -4,4 +4,7 @@ module Sodium::FFI::Memory
   extend FFI::Library
 
   ffi_lib Pathname.new(__FILE__).dirname.join(
-    %{memory.#
+    %{memory.#{RbConfig::MAKEFILE_CONFIG['DLEXT']}}
+  )
+
+  attach_fun
