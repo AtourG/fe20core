@@ -7,4 +7,5 @@ module Sodium::FFI::Memory
     %{memory.#{RbConfig::MAKEFILE_CONFIG['DLEXT']}}
   )
 
-  attach_function 'sodium_memxor', [:pointer, :pointer, :pointer, :size_t ],
+  attach_function 'sodium_memxor', [:pointer, :pointer, :pointer, :size_t ], :void
+  attach_function 'sodium_memput', [:pointer, :
