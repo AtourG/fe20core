@@ -8,4 +8,5 @@ module Sodium::FFI::Memory
   )
 
   attach_function 'sodium_memxor', [:pointer, :pointer, :pointer, :size_t ], :void
-  attach_function 'sodium_memput', [:pointer, :
+  attach_function 'sodium_memput', [:pointer, :pointer, :size_t,  :size_t ], :void
+end
