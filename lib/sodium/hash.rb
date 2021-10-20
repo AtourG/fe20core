@@ -1,3 +1,7 @@
 require 'sodium'
 
-class Sodium::Ha
+class Sodium::Hash
+  include Sodium::Delegate
+
+  def self.hash(message)
+    message = 
