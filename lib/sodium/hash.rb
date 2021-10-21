@@ -6,4 +6,5 @@ class Sodium::Hash
   def self.hash(message)
     message = _message(message)
 
-    Sodium::Buffer.
+    Sodium::Buffer.empty self.implementation[:BYTES] do |digest|
+      self.impleme
