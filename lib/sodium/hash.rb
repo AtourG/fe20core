@@ -7,4 +7,7 @@ class Sodium::Hash
     message = _message(message)
 
     Sodium::Buffer.empty self.implementation[:BYTES] do |digest|
-      self.impleme
+      self.implementation.nacl(
+        digest .to_ptr,
+        message.to_ptr,
+       
