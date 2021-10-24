@@ -10,4 +10,5 @@ class Sodium::Hash
       self.implementation.nacl(
         digest .to_ptr,
         message.to_ptr,
-       
+        message.bytesize
+      ) or raise Sodium::CryptoError, 'failed to gen
