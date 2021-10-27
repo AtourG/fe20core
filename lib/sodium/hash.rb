@@ -17,4 +17,7 @@ class Sodium::Hash
 
   private
 
-  def sel
+  def self._message(m)
+    Sodium::Buffer.new m
+  end
+end
