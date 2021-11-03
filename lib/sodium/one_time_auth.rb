@@ -8,4 +8,8 @@ class Sodium::OneTimeAuth
   end
 
   def initialize(key)
-    @key = self.class._ke
+    @key = self.class._key(key)
+  end
+
+  def one_time_auth(message)
+    message
