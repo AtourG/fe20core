@@ -12,4 +12,6 @@ class Sodium::OneTimeAuth
   end
 
   def one_time_auth(message)
-    message
+    message = self.class._message(message)
+
+    Sodium::Buffer.empty se
