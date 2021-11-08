@@ -17,4 +17,6 @@ class Sodium::OneTimeAuth
     Sodium::Buffer.empty self.implementation[:BYTES] do |authenticator|
       self.implementation.nacl(
         authenticator.to_ptr,
-        message    
+        message      .to_ptr,
+        message      .bytesize,
+        @key         .to
