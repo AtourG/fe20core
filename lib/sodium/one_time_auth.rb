@@ -15,4 +15,6 @@ class Sodium::OneTimeAuth
     message = self.class._message(message)
 
     Sodium::Buffer.empty self.implementation[:BYTES] do |authenticator|
-      self.implementatio
+      self.implementation.nacl(
+        authenticator.to_ptr,
+        message    
