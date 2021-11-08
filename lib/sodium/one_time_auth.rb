@@ -14,4 +14,5 @@ class Sodium::OneTimeAuth
   def one_time_auth(message)
     message = self.class._message(message)
 
-    Sodium::Buffer.empty se
+    Sodium::Buffer.empty self.implementation[:BYTES] do |authenticator|
+      self.implementatio
