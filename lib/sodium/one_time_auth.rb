@@ -20,4 +20,8 @@ class Sodium::OneTimeAuth
         message      .to_ptr,
         message      .bytesize,
         @key         .to_ptr
-      ) or raise Sodium::CryptoError, 'failed to gen
+      ) or raise Sodium::CryptoError, 'failed to generate an authenticator'
+    end
+  end
+
+  def verify(message, authenti
