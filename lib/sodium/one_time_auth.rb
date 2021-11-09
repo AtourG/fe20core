@@ -19,4 +19,5 @@ class Sodium::OneTimeAuth
         authenticator.to_ptr,
         message      .to_ptr,
         message      .bytesize,
-        @key         .to
+        @key         .to_ptr
+      ) or raise Sodium::CryptoError, 'failed to gen
