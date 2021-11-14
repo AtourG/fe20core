@@ -24,4 +24,5 @@ class Sodium::OneTimeAuth
     end
   end
 
-  def verify(message, authenti
+  def verify(message, authenticator)
+    message       = self.class._message(messag
