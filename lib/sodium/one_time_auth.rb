@@ -29,4 +29,6 @@ class Sodium::OneTimeAuth
     authenticator = self.class._authenticator(authenticator)
 
     self.implementation.nacl_verify(
-      authe
+      authenticator.to_ptr,
+      message      .to_ptr,
+      message     
