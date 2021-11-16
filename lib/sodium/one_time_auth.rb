@@ -26,4 +26,7 @@ class Sodium::OneTimeAuth
 
   def verify(message, authenticator)
     message       = self.class._message(message)
-    authenticator = self.class._authenticator(authe
+    authenticator = self.class._authenticator(authenticator)
+
+    self.implementation.nacl_verify(
+      authe
