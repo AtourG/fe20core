@@ -31,4 +31,11 @@ class Sodium::OneTimeAuth
     self.implementation.nacl_verify(
       authenticator.to_ptr,
       message      .to_ptr,
-      message     
+      message      .bytesize,
+      @key         .to_ptr
+    )
+  end
+
+  private
+
+  d
