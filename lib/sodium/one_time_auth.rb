@@ -39,4 +39,8 @@ class Sodium::OneTimeAuth
   private
 
   def self._key(k)
-    Sodium::Buffer.new k, self.implementation[:KEYBYT
+    Sodium::Buffer.new k, self.implementation[:KEYBYTES]
+  end
+
+  def self._authenticator(a)
+    Sodium::Bu
