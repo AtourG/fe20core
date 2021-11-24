@@ -46,4 +46,7 @@ class Sodium::OneTimeAuth
     Sodium::Buffer.new a, self.implementation[:BYTES]
   end
 
-  def self._mes
+  def self._message(m)
+    Sodium::Buffer.new m
+  end
+end
