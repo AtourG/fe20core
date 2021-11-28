@@ -3,4 +3,6 @@ require 'sodium'
 class Sodium::SecretBox
   include Sodium::Delegate
 
-  def
+  def self.key
+    Sodium::Buffer.key self.implementation[:KEYBYTES]
+  end
