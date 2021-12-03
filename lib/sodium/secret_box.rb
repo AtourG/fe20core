@@ -8,4 +8,8 @@ class Sodium::SecretBox
   end
 
   def initialize(key)
-    @key = self.class._k
+    @key = self.class._key(key)
+  end
+
+  def nonce
+    Sodium::Buffer.nonce self.implemen
