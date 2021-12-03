@@ -6,3 +6,6 @@ class Sodium::SecretBox
   def self.key
     Sodium::Buffer.key self.implementation[:KEYBYTES]
   end
+
+  def initialize(key)
+    @key = self.class._k
