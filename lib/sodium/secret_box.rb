@@ -12,4 +12,8 @@ class Sodium::SecretBox
   end
 
   def nonce
-    Sodium::Buffer.nonce self.implemen
+    Sodium::Buffer.nonce self.implementation[:NONCEBYTES]
+  end
+
+  def secret_box(message, nonce)
+    me
