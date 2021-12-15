@@ -21,4 +21,6 @@ class Sodium::SecretBox
 
     Sodium::Buffer.empty(message.bytesize) do |ciphertext|
       self.implementation.nacl(
-        ciphertext .to
+        ciphertext .to_ptr,
+        message    .to_ptr,
+        message  
