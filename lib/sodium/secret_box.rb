@@ -16,4 +16,5 @@ class Sodium::SecretBox
   end
 
   def secret_box(message, nonce)
-    me
+    message = self.class._message(message)
+    nonce   = self.c
