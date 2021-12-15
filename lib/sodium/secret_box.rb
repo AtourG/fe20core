@@ -17,4 +17,6 @@ class Sodium::SecretBox
 
   def secret_box(message, nonce)
     message = self.class._message(message)
-    nonce   = self.c
+    nonce   = self.class._nonce(nonce)
+
+    Sodium::Buffer.empty(message.bytesize) do |ci
