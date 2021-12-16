@@ -25,4 +25,5 @@ class Sodium::SecretBox
         message    .to_ptr,
         message    .bytesize,
         nonce      .to_ptr,
-        @key      
+        @key       .to_ptr
+      ) or raise Sodium::CryptoError, 'failed to c
