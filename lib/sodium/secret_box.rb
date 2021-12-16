@@ -26,4 +26,8 @@ class Sodium::SecretBox
         message    .bytesize,
         nonce      .to_ptr,
         @key       .to_ptr
-      ) or raise Sodium::CryptoError, 'failed to c
+      ) or raise Sodium::CryptoError, 'failed to close the secret box'
+    end.ldrop self.implementation[:BOXZEROBYTES]
+  end
+
+  de
