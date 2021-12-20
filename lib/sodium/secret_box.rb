@@ -31,4 +31,7 @@ class Sodium::SecretBox
   end
 
   def open(ciphertext, nonce)
-    ciphertext = self.class._ciphertext(ciphert
+    ciphertext = self.class._ciphertext(ciphertext)
+    nonce      = self.class._nonce(nonce)
+
+    Sod
