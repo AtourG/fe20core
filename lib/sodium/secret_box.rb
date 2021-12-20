@@ -30,4 +30,5 @@ class Sodium::SecretBox
     end.ldrop self.implementation[:BOXZEROBYTES]
   end
 
-  de
+  def open(ciphertext, nonce)
+    ciphertext = self.class._ciphertext(ciphert
