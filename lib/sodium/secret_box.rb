@@ -34,4 +34,4 @@ class Sodium::SecretBox
     ciphertext = self.class._ciphertext(ciphertext)
     nonce      = self.class._nonce(nonce)
 
-    Sod
+    Sodium::Buffer.empty(ciphertext.bytesize) do |message|
