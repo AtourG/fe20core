@@ -35,3 +35,5 @@ class Sodium::SecretBox
     nonce      = self.class._nonce(nonce)
 
     Sodium::Buffer.empty(ciphertext.bytesize) do |message|
+      self.implementation.nacl_open(
+        message    .to_
