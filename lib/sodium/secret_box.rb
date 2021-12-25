@@ -40,4 +40,5 @@ class Sodium::SecretBox
         ciphertext .to_ptr,
         ciphertext .bytesize,
         nonce      .to_ptr,
-        
+        @key       .to_ptr
+      ) or raise Sodium::CryptoError, '
