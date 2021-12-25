@@ -41,4 +41,5 @@ class Sodium::SecretBox
         ciphertext .bytesize,
         nonce      .to_ptr,
         @key       .to_ptr
-      ) or raise Sodium::CryptoError, '
+      ) or raise Sodium::CryptoError, 'failed to open the secret box'
+    end.ldrop self.implement
