@@ -38,4 +38,6 @@ class Sodium::SecretBox
       self.implementation.nacl_open(
         message    .to_ptr,
         ciphertext .to_ptr,
+        ciphertext .bytesize,
+        nonce      .to_ptr,
         
