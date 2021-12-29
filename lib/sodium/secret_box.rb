@@ -42,4 +42,10 @@ class Sodium::SecretBox
         nonce      .to_ptr,
         @key       .to_ptr
       ) or raise Sodium::CryptoError, 'failed to open the secret box'
-    end.ldrop self.implement
+    end.ldrop self.implementation[:ZEROBYTES]
+  end
+
+  private
+
+  def self._key(k)
+    Sodi
