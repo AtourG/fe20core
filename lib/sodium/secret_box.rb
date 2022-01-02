@@ -48,4 +48,7 @@ class Sodium::SecretBox
   private
 
   def self._key(k)
-    Sodi
+    Sodium::Buffer.new k, self.implementation[:KEYBYTES]
+  end
+
+  def self._
