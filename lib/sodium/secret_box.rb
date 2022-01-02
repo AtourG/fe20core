@@ -51,4 +51,5 @@ class Sodium::SecretBox
     Sodium::Buffer.new k, self.implementation[:KEYBYTES]
   end
 
-  def self._
+  def self._message(m)
+    Sodium::Buffer.lpad m, self.implementation[:ZEROBYTES
