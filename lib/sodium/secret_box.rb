@@ -56,4 +56,8 @@ class Sodium::SecretBox
   end
 
   def self._ciphertext(c)
-    Sodium::Buffer.lpad c,
+    Sodium::Buffer.lpad c, self.implementation[:BOXZEROBYTES]
+  end
+
+  def self._nonce(n)
+    Sod
