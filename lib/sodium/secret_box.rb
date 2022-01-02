@@ -52,4 +52,8 @@ class Sodium::SecretBox
   end
 
   def self._message(m)
-    Sodium::Buffer.lpad m, self.implementation[:ZEROBYTES
+    Sodium::Buffer.lpad m, self.implementation[:ZEROBYTES]
+  end
+
+  def self._ciphertext(c)
+    Sodium::Buffer.lpad c,
