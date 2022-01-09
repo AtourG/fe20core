@@ -60,4 +60,6 @@ class Sodium::SecretBox
   end
 
   def self._nonce(n)
-    Sod
+    Sodium::Buffer.new n, self.implementation[:NONCEBYTES]
+  end
+end
