@@ -7,4 +7,5 @@ class Sodium::Sign
     public_key = Sodium::Buffer.empty self.implementation[:PUBLICKEYBYTES]
     secret_key = Sodium::Buffer.empty self.implementation[:SECRETKEYBYTES]
 
-    self.implementat
+    self.implementation.nacl_keypair(
+      public_key.to_ptr,
