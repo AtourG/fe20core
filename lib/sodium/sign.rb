@@ -9,3 +9,5 @@ class Sodium::Sign
 
     self.implementation.nacl_keypair(
       public_key.to_ptr,
+      secret_key.to_ptr
+    ) or raise Sodium::Crypto
