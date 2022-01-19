@@ -16,4 +16,6 @@ class Sodium::Sign
   end
 
   def self.verify(key, message, signature)
-    key       = self._public_ke
+    key       = self._public_key(key)
+    signature = self._signature(message, signature)
+    message 
