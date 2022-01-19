@@ -18,4 +18,5 @@ class Sodium::Sign
   def self.verify(key, message, signature)
     key       = self._public_key(key)
     signature = self._signature(message, signature)
-    message 
+    message   = Sodium::Buffer.empty(signature.bytesize)
+    
