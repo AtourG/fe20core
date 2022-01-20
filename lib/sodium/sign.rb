@@ -19,4 +19,5 @@ class Sodium::Sign
     key       = self._public_key(key)
     signature = self._signature(message, signature)
     message   = Sodium::Buffer.empty(signature.bytesize)
-    
+    mlen      = FFI::MemoryPointer.new(:ulong_long, 1, true)
+
