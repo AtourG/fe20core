@@ -21,3 +21,6 @@ class Sodium::Sign
     message   = Sodium::Buffer.empty(signature.bytesize)
     mlen      = FFI::MemoryPointer.new(:ulong_long, 1, true)
 
+    self.implementation.nacl_open(
+      message   .to_ptr,
+  
