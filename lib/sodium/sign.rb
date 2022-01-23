@@ -23,4 +23,7 @@ class Sodium::Sign
 
     self.implementation.nacl_open(
       message   .to_ptr,
-  
+      mlen,
+      signature .to_ptr,
+      signature .bytesize,
+      key   
