@@ -26,4 +26,9 @@ class Sodium::Sign
       mlen,
       signature .to_ptr,
       signature .bytesize,
-      key   
+      key       .to_ptr
+    )
+  end
+
+  def initialize(key)
+    @
