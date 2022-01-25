@@ -35,4 +35,5 @@ class Sodium::Sign
   end
 
   def sign(message)
-    message   = se
+    message   = self.class._message(message)
+    signature = Sodium::Buffer.empt
