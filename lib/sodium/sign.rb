@@ -31,4 +31,8 @@ class Sodium::Sign
   end
 
   def initialize(key)
-    @
+    @key = self.class._secret_key(key)
+  end
+
+  def sign(message)
+    message   = se
