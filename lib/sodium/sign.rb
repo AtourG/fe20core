@@ -37,4 +37,6 @@ class Sodium::Sign
   def sign(message)
     message   = self.class._message(message)
     signature = Sodium::Buffer.empty(message.bytesize + self.implementation[:BYTES])
-    slen      = 
+    slen      = FFI::MemoryPointer.new(:ulong_long, 1, true)
+
+    se
