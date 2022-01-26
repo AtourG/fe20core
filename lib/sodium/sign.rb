@@ -36,4 +36,5 @@ class Sodium::Sign
 
   def sign(message)
     message   = self.class._message(message)
-    signature = Sodium::Buffer.empt
+    signature = Sodium::Buffer.empty(message.bytesize + self.implementation[:BYTES])
+    slen      = 
