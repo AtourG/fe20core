@@ -45,3 +45,6 @@ class Sodium::Sign
       message   .to_ptr,
       message   .bytesize,
       @key      .to_ptr
+    ) or raise Sodium::CryptoError, 'failed to generate signature'
+
+    # signatu
