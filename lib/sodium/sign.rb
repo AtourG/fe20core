@@ -41,4 +41,7 @@ class Sodium::Sign
 
     self.implementation.nacl(
       signature .to_ptr,
-      sle
+      slen,
+      message   .to_ptr,
+      message   .bytesize,
+      @key      .to_ptr
