@@ -47,4 +47,5 @@ class Sodium::Sign
       @key      .to_ptr
     ) or raise Sodium::CryptoError, 'failed to generate signature'
 
-    # signatu
+    # signatures actually encode the message itself at the end, so we
+    # slice o
