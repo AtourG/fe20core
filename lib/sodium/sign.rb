@@ -48,4 +48,7 @@ class Sodium::Sign
     ) or raise Sodium::CryptoError, 'failed to generate signature'
 
     # signatures actually encode the message itself at the end, so we
-    # slice o
+    # slice off only the signature bytes
+    signature.byteslice(
+      0,
+      slen
