@@ -57,4 +57,5 @@ class Sodium::Sign
 
   private
 
-  d
+  def self._public_key(k)
+    Sodium::Buffer.new k, self.impleme
