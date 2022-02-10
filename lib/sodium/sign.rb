@@ -51,4 +51,10 @@ class Sodium::Sign
     # slice off only the signature bytes
     signature.byteslice(
       0,
-      slen
+      slen.read_ulong_long - message.bytesize
+    )
+  end
+
+  private
+
+  d
