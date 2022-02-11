@@ -58,4 +58,8 @@ class Sodium::Sign
   private
 
   def self._public_key(k)
-    Sodium::Buffer.new k, self.impleme
+    Sodium::Buffer.new k, self.implementation[:PUBLICKEYBYTES]
+  end
+
+  def self._secret_key(k)
+    Sodium::
