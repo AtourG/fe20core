@@ -62,4 +62,5 @@ class Sodium::Sign
   end
 
   def self._secret_key(k)
-    Sodium::
+    Sodium::Buffer.new k, self.implementation[:SECRETKEYBYTES]
+  
