@@ -67,4 +67,8 @@ class Sodium::Sign
 
   def self._message(m)
     Sodium::Buffer.new m
-  en
+  end
+
+  def self._signature(m, s)
+    Sodium::Buffer.new(s) + m
+  end
