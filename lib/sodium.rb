@@ -1,2 +1,4 @@
 module Sodium
-  class Error       < ::StandardErro
+  class Error       < ::StandardError; end
+  class LengthError < Error;           end
+  class Crypto
