@@ -7,4 +7,6 @@ end
 
 # require 'sodium/version'
 
-# core classe
+# core classes used by other modules
+require 'sodium/delegate'
+require 'sodium/b
