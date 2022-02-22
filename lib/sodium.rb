@@ -9,4 +9,8 @@ end
 
 # core classes used by other modules
 require 'sodium/delegate'
-require 'sodium/b
+require 'sodium/buffer'
+require 'sodium/random'
+
+# object-oriented bindings to FFI
+require 'sodiu
