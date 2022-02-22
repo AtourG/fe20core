@@ -13,4 +13,7 @@ require 'sodium/buffer'
 require 'sodium/random'
 
 # object-oriented bindings to FFI
+require 'sodium/auth'
+require 'sodium/box'
+require 'sodium/hash'
 require 'sodiu
