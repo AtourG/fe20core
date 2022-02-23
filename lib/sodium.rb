@@ -18,4 +18,7 @@ require 'sodium/box'
 require 'sodium/hash'
 require 'sodium/one_time_auth'
 require 'sodium/secret_box'
-require
+require 'sodium/sign'
+
+# automagic FFI bindings to libsodium
+require 'so
