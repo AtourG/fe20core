@@ -21,4 +21,4 @@ require 'sodium/secret_box'
 require 'sodium/sign'
 
 # automagic FFI bindings to libsodium
-require 'so
+require 'sodium/ffi'
