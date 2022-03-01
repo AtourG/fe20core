@@ -2,4 +2,7 @@ Gem::Specification.new do |gem|
   gem.name    = 'sodium'
   gem.version = File.read('VERSION') rescue '0.0.0'
 
-  gem.au
+  gem.author = 'Stephen Touset'
+  gem.email  = 'stephen@touset.org'
+
+  ge
