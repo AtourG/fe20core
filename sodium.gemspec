@@ -5,4 +5,5 @@ Gem::Specification.new do |gem|
   gem.author = 'Stephen Touset'
   gem.email  = 'stephen@touset.org'
 
-  ge
+  gem.homepage    = 'https://github.com/stouset/sodium'
+ 
