@@ -11,4 +11,5 @@ Gem::Specification.new do |gem|
   gem.license = 'MIT'
 
   gem.bindir      = 'bin'
-  gem.fil
+  gem.files       = `git ls-files`               .split("\n")
+  gem
