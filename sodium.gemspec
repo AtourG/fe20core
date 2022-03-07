@@ -12,4 +12,4 @@ Gem::Specification.new do |gem|
 
   gem.bindir      = 'bin'
   gem.files       = `git ls-files`               .split("\n")
-  gem
+  gem.executables = `git ls-files -- bin/*`      .split("\n").map {|e| Fil
