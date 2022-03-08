@@ -13,4 +13,5 @@ Gem::Specification.new do |gem|
   gem.bindir      = 'bin'
   gem.files       = `git ls-files`               .split("\n")
   gem.executables = `git ls-files -- bin/*`      .split("\n").map {|e| File.basename(e) }
-  gem.extensions  = `git ls-files -- ext/
+  gem.extensions  = `git ls-files -- ext/**/*.rb`.split("\n")
+  gem.test_files  = `git ls-files -- spe
