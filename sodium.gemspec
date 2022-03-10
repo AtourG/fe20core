@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'ffi', '~> 1'
 
-  gem.add_development_dep
+  gem.add_development_dependency 'rake',     '~> 10'
+  gem.add_development_dependency 'mini
