@@ -18,4 +18,6 @@ Gem::Specification.new do |gem|
 
   gem.requirements << 'libsodium ~> 0.5'
 
-  
+  gem.add_dependency 'ffi', '~> 1'
+
+  gem.add_development_dep
