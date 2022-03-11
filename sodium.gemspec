@@ -22,4 +22,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'rake',     '~> 10'
   gem.add_development_dependency 'minitest', '~> 5'
-  gem.add_development_dependency 'version',
+  gem.add_development_dependency 'version',  '~> 1'
+
+  # bundler tries to build the gem on load, so o
