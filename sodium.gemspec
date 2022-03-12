@@ -24,4 +24,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest', '~> 5'
   gem.add_development_dependency 'version',  '~> 1'
 
-  # bundler tries to build the gem on load, so o
+  # bundler tries to build the gem on load, so only sign if the key is
+  # present; however, we stil
