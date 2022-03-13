@@ -25,4 +25,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'version',  '~> 1'
 
   # bundler tries to build the gem on load, so only sign if the key is
-  # present; however, we stil
+  # present; however, we still warn just in case we're legitimately
+  # packaging the gem for r
