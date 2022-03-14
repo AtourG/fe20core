@@ -26,4 +26,5 @@ Gem::Specification.new do |gem|
 
   # bundler tries to build the gem on load, so only sign if the key is
   # present; however, we still warn just in case we're legitimately
-  # packaging the gem for r
+  # packaging the gem for release but they key isn't available
+  if File.exist?('/Volum
