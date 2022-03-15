@@ -28,4 +28,5 @@ Gem::Specification.new do |gem|
   # present; however, we still warn just in case we're legitimately
   # packaging the gem for release but they key isn't available
   if File.exist?('/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key')
-    gem.signing_ke
+    gem.signing_key = '/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key'
+  
