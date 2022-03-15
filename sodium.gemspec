@@ -29,4 +29,4 @@ Gem::Specification.new do |gem|
   # packaging the gem for release but they key isn't available
   if File.exist?('/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key')
     gem.signing_key = '/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key'
-  
+    gem.cert_chain  = [ 'certs/sodium@touset.org.cert' ]
