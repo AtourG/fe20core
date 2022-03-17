@@ -30,3 +30,5 @@ Gem::Specification.new do |gem|
   if File.exist?('/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key')
     gem.signing_key = '/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key'
     gem.cert_chain  = [ 'certs/sodium@touset.org.cert' ]
+  else
+    warn 'Building the sodium gem without a si
