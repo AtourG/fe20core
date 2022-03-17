@@ -31,4 +31,6 @@ Gem::Specification.new do |gem|
     gem.signing_key = '/Volumes/Sensitive/Keys/Gems/sodium@touset.org.key'
     gem.cert_chain  = [ 'certs/sodium@touset.org.cert' ]
   else
-    warn 'Building the sodium gem without a si
+    warn 'Building the sodium gem without a signature...'
+  end
+end
