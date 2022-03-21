@@ -4,4 +4,6 @@ namespace :compile do
 
   MEMORY_PATH = File.join EXT_PATH,    'memory'
   MEMORY_SRC  = File.join MEMORY_PATH, '*.c'
-  MEMORY_LIB  = 'memory.' + RbConfi
+  MEMORY_LIB  = 'memory.' + RbConfig::CONFIG['DLEXT']
+
+  desc 'Compile the memory extens
