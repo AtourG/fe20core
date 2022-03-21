@@ -6,4 +6,7 @@ namespace :compile do
   MEMORY_SRC  = File.join MEMORY_PATH, '*.c'
   MEMORY_LIB  = 'memory.' + RbConfig::CONFIG['DLEXT']
 
-  desc 'Compile the memory extens
+  desc 'Compile the memory extension'
+  task :memory => %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}}
+
+  file 
