@@ -9,4 +9,5 @@ namespace :compile do
   desc 'Compile the memory extension'
   task :memory => %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}}
 
-  file 
+  file %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}} => FileList[MEMORY_SRC] do
+  
