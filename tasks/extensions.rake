@@ -11,4 +11,7 @@ namespace :compile do
 
   file %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}} => FileList[MEMORY_SRC] do
     Dir.chdir(MEMORY_PATH) { ruby %{extconf.rb} }
-    sh %{make -C #{ME
+    sh %{make -C #{MEMORY_PATH} install sitearchdir="#{LIB_PATH}"}
+  end
+
+  task :clean d
