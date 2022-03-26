@@ -10,4 +10,5 @@ namespace :compile do
   task :memory => %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}}
 
   file %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}} => FileList[MEMORY_SRC] do
-  
+    Dir.chdir(MEMORY_PATH) { ruby %{extconf.rb} }
+    sh %{make -C #{ME
