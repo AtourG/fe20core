@@ -16,4 +16,8 @@ namespace :compile do
 
   task :clean do
     sh %{make -C #{MEMORY_PATH} realclean} if
-      File.exist? %{#{ME
+      File.exist? %{#{MEMORY_PATH}/Makefile}
+  end
+
+  task :clobber do
+    CLOBBER.ad
