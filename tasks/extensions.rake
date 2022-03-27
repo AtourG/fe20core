@@ -14,4 +14,6 @@ namespace :compile do
     sh %{make -C #{MEMORY_PATH} install sitearchdir="#{LIB_PATH}"}
   end
 
-  task :clean d
+  task :clean do
+    sh %{make -C #{MEMORY_PATH} realclean} if
+      File.exist? %{#{ME
