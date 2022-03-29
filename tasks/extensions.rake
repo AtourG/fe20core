@@ -20,4 +20,7 @@ namespace :compile do
   end
 
   task :clobber do
-    CLOBBER.ad
+    CLOBBER.add %{#{LIB_PATH}/sodium/ffi/#{MEMORY_LIB}}
+  end
+end
+
