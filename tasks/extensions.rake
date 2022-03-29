@@ -24,3 +24,5 @@ namespace :compile do
   end
 end
 
+desc 'Compile all native extensions'
+task :compile => %w{ compil
