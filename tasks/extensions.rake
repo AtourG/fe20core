@@ -25,4 +25,8 @@ namespace :compile do
 end
 
 desc 'Compile all native extensions'
-task :compile => %w{ compil
+task :compile => %w{ compile:memory }
+
+task :test => %w{ compile }
+
+task :clean   => :'compi
