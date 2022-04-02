@@ -29,4 +29,5 @@ task :compile => %w{ compile:memory }
 
 task :test => %w{ compile }
 
-task :clean   => :'compi
+task :clean   => :'compile:clean'
+task :clobber => :'compile:clobber'
