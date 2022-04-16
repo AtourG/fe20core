@@ -13,4 +13,9 @@ LIBSODIUM_TARBALL   = "build/#{LIBSODIUM_PATH}.tar.gz"
 LIBSODIUM_BUILD     = "build/#{LIBSODIUM_PATH}"
 LIBSODIUM_LIBDIR    = "#{LIBSODIUM_BUILD}/src/libsodium/.libs"
 LIBSODIUM_LIB       = "libsodium.a"
-LIBSODIUM           = "#{LIBSODIUM_LIBDIR}/#{LIBSODIUM_
+LIBSODIUM           = "#{LIBSODIUM_LIBDIR}/#{LIBSODIUM_LIB}"
+
+namespace :libsodium do
+  directory LIBSODIUM_BUILD
+
+  fi
