@@ -18,4 +18,5 @@ LIBSODIUM           = "#{LIBSODIUM_LIBDIR}/#{LIBSODIUM_LIB}"
 namespace :libsodium do
   directory LIBSODIUM_BUILD
 
-  fi
+  file LIBSODIUM_TARBALL => LIBSODIUM_BUILD do
+    sh %{curl -L -o #{
