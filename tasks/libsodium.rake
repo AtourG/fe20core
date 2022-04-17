@@ -19,4 +19,7 @@ namespace :libsodium do
   directory LIBSODIUM_BUILD
 
   file LIBSODIUM_TARBALL => LIBSODIUM_BUILD do
-    sh %{curl -L -o #{
+    sh %{curl -L -o #{LIBSODIUM_TARBALL} #{LIBSODIUM_URL}}
+
+    next if LIBSODIUM_DIGEST.nil?
+    ne
