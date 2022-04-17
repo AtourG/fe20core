@@ -22,4 +22,5 @@ namespace :libsodium do
     sh %{curl -L -o #{LIBSODIUM_TARBALL} #{LIBSODIUM_URL}}
 
     next if LIBSODIUM_DIGEST.nil?
-    ne
+    next if LIBSODIUM_DIGEST == Digest::SHA256.hexdigest(
+      File.rea
