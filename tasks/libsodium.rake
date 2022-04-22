@@ -23,4 +23,8 @@ namespace :libsodium do
 
     next if LIBSODIUM_DIGEST.nil?
     next if LIBSODIUM_DIGEST == Digest::SHA256.hexdigest(
-      File.rea
+      File.read(LIBSODIUM_TARBALL)
+    )
+
+    rm LIBSODIUM_TARBALL
+    raise
