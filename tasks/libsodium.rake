@@ -27,4 +27,7 @@ namespace :libsodium do
     )
 
     rm LIBSODIUM_TARBALL
-    raise
+    raise "#{LIBSODIUM_TARBALL} failed checksum"
+  end
+
+  file "#{
