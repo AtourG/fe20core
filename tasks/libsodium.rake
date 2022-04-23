@@ -30,4 +30,5 @@ namespace :libsodium do
     raise "#{LIBSODIUM_TARBALL} failed checksum"
   end
 
-  file "#{
+  file "#{LIBSODIUM_BUILD}/autogen.sh" => [
+    LIBSODIUM_BUIL
