@@ -31,4 +31,7 @@ namespace :libsodium do
   end
 
   file "#{LIBSODIUM_BUILD}/autogen.sh" => [
-    LIBSODIUM_BUIL
+    LIBSODIUM_BUILD,
+    LIBSODIUM_TARBALL,
+  ] do
+    sh %{tar -C #{LIBSO
