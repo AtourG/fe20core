@@ -34,4 +34,7 @@ namespace :libsodium do
     LIBSODIUM_BUILD,
     LIBSODIUM_TARBALL,
   ] do
-    sh %{tar -C #{LIBSODIUM_BUILD} --strip-components 1 -m -xf #{LIBSODIU
+    sh %{tar -C #{LIBSODIUM_BUILD} --strip-components 1 -m -xf #{LIBSODIUM_TARBALL}}
+  end
+
+  file "#{LIBSODIUM_BUILD}/configure" => "#
