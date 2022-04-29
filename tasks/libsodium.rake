@@ -37,4 +37,5 @@ namespace :libsodium do
     sh %{tar -C #{LIBSODIUM_BUILD} --strip-components 1 -m -xf #{LIBSODIUM_TARBALL}}
   end
 
-  file "#{LIBSODIUM_BUILD}/configure" => "#
+  file "#{LIBSODIUM_BUILD}/configure" => "#{LIBSODIUM_BUILD}/autogen.sh" do
+    sh %{cd #{LIBSODIUM_B
