@@ -41,4 +41,5 @@ namespace :libsodium do
     sh %{cd #{LIBSODIUM_BUILD} && ./autogen.sh}
   end
 
-  file "#{LIBSODIUM_BUILD}/Makefi
+  file "#{LIBSODIUM_BUILD}/Makefile" => "#{LIBSODIUM_BUILD}/configure" do
+    sh %{cd
