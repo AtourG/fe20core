@@ -45,4 +45,6 @@ namespace :libsodium do
     sh %{cd #{LIBSODIUM_BUILD} && ./configure}
   end
 
-  file LIBSODIUM => 
+  file LIBSODIUM => "#{LIBSODIUM_BUILD}/Makefile" do
+    sh %{cd #{LIBSODIUM_BUILD} && make}
+ 
