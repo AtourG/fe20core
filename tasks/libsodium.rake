@@ -56,4 +56,8 @@ namespace :libsodium do
     ENV[  'LD_LIBRARY_PATH'] = LIBSODIUM_LIBDIR
   end
 
-  task
+  task :clean do
+    sh %{cd #{LIBSODIUM_BUILD} && make mostlyclean}
+  end
+
+  ta
