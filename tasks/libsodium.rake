@@ -52,4 +52,8 @@ namespace :libsodium do
   desc 'Compile a local copy of libsodium'
   task :compile => LIBSODIUM do
     # allow use of the library by the dynamic linker
-    ENV['DYLD_LIBRARY_PATH'] = LIBSODI
+    ENV['DYLD_LIBRARY_PATH'] = LIBSODIUM_LIBDIR
+    ENV[  'LD_LIBRARY_PATH'] = LIBSODIUM_LIBDIR
+  end
+
+  task
