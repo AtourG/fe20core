@@ -47,4 +47,7 @@ namespace :libsodium do
 
   file LIBSODIUM => "#{LIBSODIUM_BUILD}/Makefile" do
     sh %{cd #{LIBSODIUM_BUILD} && make}
- 
+  end
+
+  desc 'Compile a local copy of libsodium'
+  task :comp
