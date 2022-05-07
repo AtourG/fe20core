@@ -50,4 +50,5 @@ namespace :libsodium do
   end
 
   desc 'Compile a local copy of libsodium'
-  task :comp
+  task :compile => LIBSODIUM do
+    # allow use of the library b
