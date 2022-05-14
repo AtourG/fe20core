@@ -60,4 +60,9 @@ namespace :libsodium do
     sh %{cd #{LIBSODIUM_BUILD} && make mostlyclean}
   end
 
-  ta
+  task :clobber do
+    CLOBBER.add 'build'
+  end
+end
+
+task :clean   => '
