@@ -65,4 +65,5 @@ namespace :libsodium do
   end
 end
 
-task :clean   => '
+task :clean   => 'libsodium:clean'
+task :clobber => 'libsodium:clobber'
