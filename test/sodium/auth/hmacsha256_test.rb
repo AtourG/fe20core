@@ -5,4 +5,5 @@ describe Sodium::Auth::HMACSHA256 do
 
   subject { self.klass.new(self.key) }
 
-  let(:kl
+  let(:klass)     { Sodium::Auth::HMACSHA256 }
+  let(:primitive) { :hmacsha256
