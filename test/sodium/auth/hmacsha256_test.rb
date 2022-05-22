@@ -1,4 +1,8 @@
 require 'test_helper'
 
 describe Sodium::Auth::HMACSHA256 do
-  include S
+  include SodiumTestHelpers
+
+  subject { self.klass.new(self.key) }
+
+  let(:kl
