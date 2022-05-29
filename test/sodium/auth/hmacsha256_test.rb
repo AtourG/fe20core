@@ -13,4 +13,5 @@ describe Sodium::Auth::HMACSHA256 do
       :KEYBYTES => 32, }
   end
 
-  let_64(:key)           { 'XM
+  let_64(:key)           { 'XMfWD8/yrcNDzJyGhxRIwi5tSGKf8D0ul9FyX/djvjg=' }
+  let_64(:authe
