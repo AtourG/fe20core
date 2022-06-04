@@ -14,4 +14,5 @@ describe Sodium::Auth::HMACSHA256 do
   end
 
   let_64(:key)           { 'XMfWD8/yrcNDzJyGhxRIwi5tSGKf8D0ul9FyX/djvjg=' }
-  let_64(:authe
+  let_64(:authenticator) { '6WDKvxKevcZts0Yc1HWGnylNYEpcxPO9tVtApEK8XWc=' }
+  le
