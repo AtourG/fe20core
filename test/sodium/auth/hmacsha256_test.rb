@@ -21,4 +21,6 @@ describe Sodium::Auth::HMACSHA256 do
     self.klass.primitive.must_equal self.primitive
   end
 
-  it 'must have correct values for its constan
+  it 'must have correct values for its constants' do
+    self.constants.each_pair do |name, value|
+     
