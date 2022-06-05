@@ -18,4 +18,7 @@ describe Sodium::Auth::HMACSHA256 do
   let_64(:plaintext)     { 'bWVzc2FnZQ==' }
 
   it '::primitive must be correct' do
-    self.klass.primitive.must_equal
+    self.klass.primitive.must_equal self.primitive
+  end
+
+  it 'must have correct values for its constan
