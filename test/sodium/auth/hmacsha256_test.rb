@@ -23,4 +23,8 @@ describe Sodium::Auth::HMACSHA256 do
 
   it 'must have correct values for its constants' do
     self.constants.each_pair do |name, value|
-     
+      self.klass[name].must_equal value
+    end
+  end
+
+  it 
