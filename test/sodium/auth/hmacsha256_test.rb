@@ -27,4 +27,5 @@ describe Sodium::Auth::HMACSHA256 do
     end
   end
 
-  it 
+  it 'must mint keys' do
+    self.klass.key.bytesize.
