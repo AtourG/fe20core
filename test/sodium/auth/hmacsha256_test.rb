@@ -32,4 +32,7 @@ describe Sodium::Auth::HMACSHA256 do
       must_equal self.klass[:KEYBYTES]
   end
 
-  it 'must generate auth
+  it 'must generate authenticators' do
+    self.klass.auth(
+      self.key,
+      self.plai
