@@ -29,3 +29,7 @@ describe Sodium::Auth::HMACSHA256 do
 
   it 'must mint keys' do
     self.klass.key.bytesize.
+      must_equal self.klass[:KEYBYTES]
+  end
+
+  it 'must generate auth
