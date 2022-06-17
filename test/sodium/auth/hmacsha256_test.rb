@@ -35,4 +35,7 @@ describe Sodium::Auth::HMACSHA256 do
   it 'must generate authenticators' do
     self.klass.auth(
       self.key,
-      self.plai
+      self.plaintext
+    ).to_s.must_equal self.authenticator
+
+    sel
