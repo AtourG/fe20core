@@ -38,4 +38,6 @@ describe Sodium::Auth::HMACSHA256 do
       self.plaintext
     ).to_s.must_equal self.authenticator
 
-    sel
+    self.subject.auth(
+      self.plaintext
+    ).to_s.must_equal self.
