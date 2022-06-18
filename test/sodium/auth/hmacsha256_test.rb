@@ -43,4 +43,7 @@ describe Sodium::Auth::HMACSHA256 do
     ).to_s.must_equal self.authenticator
   end
 
-  it 'must verify authenticat
+  it 'must verify authenticators' do
+    self.klass.verify(
+      self.key,
+      s
