@@ -52,4 +52,8 @@ describe Sodium::Auth::HMACSHA256 do
 
     self.subject.verify(
       self.plaintext,
-     
+      self.authenticator
+    ).must_equal true
+  end
+
+  it 'must not ver
