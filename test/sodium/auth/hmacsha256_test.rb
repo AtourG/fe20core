@@ -58,3 +58,6 @@ describe Sodium::Auth::HMACSHA256 do
 
   it 'must not verify forged authenticators' do
     self.subject.verify(
+      self.plaintext,
+      self.authenticator.succ
+    ).must_equa
