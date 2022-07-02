@@ -60,4 +60,6 @@ describe Sodium::Auth::HMACSHA256 do
     self.subject.verify(
       self.plaintext,
       self.authenticator.succ
-    ).must_equa
+    ).must_equal false
+  end
+end
