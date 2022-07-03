@@ -36,3 +36,30 @@ describe Sodium::Auth::HMACSHA512256 do
     self.klass.auth(
       self.key,
       self.plaintext
+    ).to_s.must_equal self.authenticator
+
+    self.subject.auth(
+      self.plaintext
+    ).to_s.must_equal self.authenticator
+  end
+
+  it 'must verify authenticators' do
+    self.klass.verify(
+      self.key,
+      self.plaintext,
+      self.authenticator
+    ).must_equal true
+
+    self.subject.verify(
+      self.plaintext,
+      self.authenticator
+    ).must_equal true
+  end
+
+  it 'must not verify forged authenticators' do
+    self.subject.verify(
+      self.plaintext,
+      self.authenticator.succ
+    ).must_equal false
+  end
+end
