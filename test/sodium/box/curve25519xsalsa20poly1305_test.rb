@@ -42,3 +42,39 @@ describe Sodium::Box::Curve25519XSalsa20Poly1305 do
 
   it 'must mint public keys' do
     self.klass.keypair[1].bytesize.must_equal self.klass[:PUBLICKEYBYTES]
+  end
+
+  it 'must generate closed boxes' do
+    self.subject.box(
+      self.plaintext,
+      self.nonce
+    ).to_s.must_equal self.ciphertext
+  end
+
+  it 'must open boxes' do
+    self.subject.open(
+      self.ciphertext,
+      self.nonce
+    ).to_s.must_equal self.plaintext
+  end
+
+  it 'must generate shared keys' do
+    self.subject.beforenm.to_s.must_equal self.shared_key
+  end
+
+  it 'must generate closed boxes with shared keys' do
+    self.klass.afternm(
+      self.shared_key,
+      self.plaintext,
+      self.nonce
+    ).to_s.must_equal self.ciphertext
+  end
+
+  it 'must open boxes with shared keys' do
+    self.klass.open_afternm(
+      self.shared_key,
+      self.ciphertext,
+      self.nonce
+    ).to_s.must_equal self.plaintext
+  end
+end
