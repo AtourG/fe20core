@@ -172,3 +172,19 @@ describe Sodium::Buffer do
 
     pointer.read_bytes(3).wont_equal('xyz')
   end
+
+  it 'must free its contents when garbage collected' do
+    flag = MiniTest::Mock.new
+    free = lambda {|pointer| flag.called(pointer) }
+    flag.expect :called, nil, [ FFI::Pointer ]
+
+    Sodium::FFI::LibC.stub(:free, free) do
+      Sodium::Buffer.new('xyz')
+
+      trigger_gc!
+    end
+
+
+    flag.verify
+  end
+end
