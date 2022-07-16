@@ -46,3 +46,62 @@ describe Sodium::Buffer do
 
   it '::ljust must pad zero bytes on the end' do
     subject.ljust('xyz', 5).to_s.must_equal "xyz\0\0"
+  end
+
+  it '::ljust must not pad bytes when not needed' do
+    subject.ljust('xyz', 2).to_s.must_equal 'xyz'
+  end
+
+  it '::rjust must pad zero bytes onto the front' do
+    subject.rjust('xyz', 5).to_s.must_equal "\0\0xyz"
+  end
+
+  it '::rjust must not pad bytes when not needed' do
+    subject.rjust('xyz', 2).to_s.must_equal 'xyz'
+  end
+
+  it '::lpad must prepend the required number of bytes' do
+    subject.lpad('xyz', 0).to_s.must_equal 'xyz'
+    subject.lpad('xyz', 2).to_s.must_equal "\0\0xyz"
+  end
+
+  it '::rpad must append the required number of bytes' do
+    subject.rpad('xyz', 0).to_s.must_equal 'xyz'
+    subject.rpad('xyz', 2).to_s.must_equal "xyz\0\0"
+  end
+
+  it '::new must create a buffer containing the specified string' do
+    subject.new('xyz'     ).to_s.must_equal('xyz')
+    subject.new('xyz' * 50).to_s.must_equal('xyz' * 50)
+  end
+
+  it '::new must do optional length checking' do
+    lambda { subject.new('xyz', 4).to_s }.
+      must_raise Sodium::LengthError
+  end
+
+  it '#initialize must freeze its bytes' do
+    subject.new('s').to_ptr.must_be :frozen?
+    subject.new('s').to_s  .must_be :frozen?
+  end
+
+  it '#initialize must wipe the memory from the original string' do
+    'test'.tap do |s|
+      subject.new(s)
+    end.must_equal("\0" * 4)
+  end
+
+  it '#initialize must accept ZeroingDelegator-wrapped strings' do
+    lambda { subject.new subject.new('xyz').to_s }.call.
+      wont_equal TypeError
+  end
+
+  it '#initialize must wipe the buffer during finalization'
+  it '#initialize must prevent the string from being paged to disk'
+
+  it '#== must compare equality of two buffers' do
+    subject.new('xyz').must_be :==, 'xyz'
+    subject.new('xyz').wont_be :==, 'xy'
+    subject.new('xyz').wont_be :==, 'xyzz'
+    subject.new('xyz').wont_be :==, 'abc'
+  end
