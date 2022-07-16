@@ -98,3 +98,13 @@ describe Sodium::Box do
 
   it 'must raise when failing to open a box with a shared key' do
     sodium_stub_failure(self.klass, :nacl_open_afternm) do
+      lambda do
+        key        = self.subject.beforenm
+        nonce      = self.subject.nonce
+        ciphertext = 'ciphertext'
+
+        self.klass.open_afternm(key, ciphertext, nonce)
+      end.must_raise Sodium::CryptoError
+    end
+  end
+end
