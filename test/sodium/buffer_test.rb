@@ -105,3 +105,70 @@ describe Sodium::Buffer do
     subject.new('xyz').wont_be :==, 'xyzz'
     subject.new('xyz').wont_be :==, 'abc'
   end
+
+  it '#== must compare equality of two buffers in constant time'
+
+  it '#+ must append two buffers' do
+    subject.new('xyz').+('abc').to_s.must_equal 'xyzabc'
+  end
+
+  it '#^ must XOR two buffers' do
+    subject.new('xyz').^('xyz').to_s.must_equal "\0\0\0"
+    subject.new('xyz').^('xyz').to_s.must_equal "\0\0\0"
+  end
+
+  it '#[]= must allow replacement of byte ranges' do
+    subject.new('xyz').tap {|b| b[0, 3] = 'abc' }.to_s.must_equal 'abc'
+    subject.new('xyz').tap {|b| b[0, 2] = 'ab'  }.to_s.must_equal 'abz'
+    subject.new('xyz').tap {|b| b[2, 1] = 'c'   }.to_s.must_equal 'xyc'
+  end
+
+  it '#[]= must not allow resizing the buffer' do
+    lambda { subject.new('xyz')[0, 1] = 'ab' }.must_raise ArgumentError
+    lambda { subject.new('xyz')[0, 2] = 'a'  }.must_raise ArgumentError
+    lambda { subject.new('xyz')[3, 1] = 'a'  }.must_raise ArgumentError
+    lambda { subject.new('xyz')[2, 2] = 'ab' }.must_raise ArgumentError
+  end
+
+  it '#[] must accept an offset and number of bytes to return' do
+    subject.new('xyz').tap do |buffer|
+      buffer[ 0,  0].to_s.must_equal ''
+      buffer[ 0,  1].to_s.must_equal 'x'
+      buffer[ 0,  3].to_s.must_equal 'xyz'
+      buffer[ 2,  1].to_s.must_equal 'z'
+    end
+  end
+
+  it '#bytesize must return its length' do
+    subject.new('testing').bytesize.must_equal 7
+  end
+
+  it '#ldrop must drop bytes off the left' do
+    subject.new('xyz').ldrop(2).to_s.must_equal('z')
+  end
+
+  it '#rdrop must drop bytes off the right' do
+    subject.new('xyz').rdrop(2).to_s.must_equal('x')
+  end
+
+  it '#inspect must not reveal its instance variables' do
+    subject.new('blah').inspect.wont_include 'blah'
+  end
+
+  it '#to_s must return its internal bytes' do
+    subject.new('xyz').to_s.must_equal('xyz')
+  end
+
+  it '#to_ptr must return the live pointer to its data' do
+    subject.new('xyz').to_ptr.read_bytes(3).must_equal('xyz')
+  end
+
+
+  it 'must wipe its contents when garbage collected' do
+    address = lambda { Sodium::Buffer.new('xyz').to_ptr.address }
+    pointer = FFI::Pointer.new(address.call)
+
+    trigger_gc!
+
+    pointer.read_bytes(3).wont_equal('xyz')
+  end
