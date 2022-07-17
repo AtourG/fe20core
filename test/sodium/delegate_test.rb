@@ -7,4 +7,5 @@ class DelegateTest
     self.const_get(key)
   end
 
-  class Subclass1 < self; PRIMITI
+  class Subclass1 < self; PRIMITIVE = :subclass1; end
+  class Subclass2 < self; PRIMITIVE = :subc
