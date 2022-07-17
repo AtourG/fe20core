@@ -1,4 +1,7 @@
 require 'test_helper'
 
 class DelegateTest
-  in
+  include Sodium::Delegate
+
+  def self.[](key)
+    sel
