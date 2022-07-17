@@ -4,4 +4,7 @@ class DelegateTest
   include Sodium::Delegate
 
   def self.[](key)
-    sel
+    self.const_get(key)
+  end
+
+  class Subclass1 < self; PRIMITI
