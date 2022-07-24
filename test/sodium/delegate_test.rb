@@ -8,4 +8,9 @@ class DelegateTest
   end
 
   class Subclass1 < self; PRIMITIVE = :subclass1; end
-  class Subclass2 < self; PRIMITIVE = :subc
+  class Subclass2 < self; PRIMITIVE = :subclass2; end
+
+  DEFAULT = :subclass1
+end
+
+describe Sodium::De
