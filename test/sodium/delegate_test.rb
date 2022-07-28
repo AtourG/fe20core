@@ -13,4 +13,5 @@ class DelegateTest
   DEFAULT = :subclass1
 end
 
-describe Sodium::De
+describe Sodium::Delegate do
+  subject        { self.klass.new        
