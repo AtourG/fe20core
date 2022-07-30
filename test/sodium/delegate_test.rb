@@ -16,4 +16,6 @@ end
 describe Sodium::Delegate do
   subject        { self.klass.new          }
   let(:klass)    { DelegateTest            }
-  let(:subclass
+  let(:subclass) { DelegateTest::Subclass1 }
+
+  it '::implementation must
