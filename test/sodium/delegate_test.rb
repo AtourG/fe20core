@@ -22,4 +22,5 @@ describe Sodium::Delegate do
     self.klass.implementation.must_equal self.subclass
   end
 
-  it 'must allow access to constants thro
+  it 'must allow access to constants through indexing' do
+    self.klass.implementation[:PRIM
