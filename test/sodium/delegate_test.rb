@@ -18,4 +18,5 @@ describe Sodium::Delegate do
   let(:klass)    { DelegateTest            }
   let(:subclass) { DelegateTest::Subclass1 }
 
-  it '::implementation must
+  it '::implementation must be the default' do
+    self.klass.implementation.must_equal self
