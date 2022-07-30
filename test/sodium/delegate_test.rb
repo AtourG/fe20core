@@ -14,4 +14,6 @@ class DelegateTest
 end
 
 describe Sodium::Delegate do
-  subject        { self.klass.new        
+  subject        { self.klass.new          }
+  let(:klass)    { DelegateTest            }
+  let(:subclass
