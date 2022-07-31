@@ -26,4 +26,5 @@ describe Sodium::Delegate do
     self.klass.implementation[:PRIMITIVE].must_equal :subclass1
   end
 
-  it 'must allow access to 
+  it 'must allow access to arbitrary implementations' do
+    self.klass.implementation(:
