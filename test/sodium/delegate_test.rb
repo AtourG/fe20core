@@ -30,4 +30,5 @@ describe Sodium::Delegate do
     self.klass.implementation(:subclass2).must_equal DelegateTest::Subclass2
   end
 
-  it 'mu
+  it 'must instantiate the default implementation' do
+    self.klass.n
