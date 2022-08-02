@@ -27,4 +27,7 @@ describe Sodium::Delegate do
   end
 
   it 'must allow access to arbitrary implementations' do
-    self.klass.implementation(:
+    self.klass.implementation(:subclass2).must_equal DelegateTest::Subclass2
+  end
+
+  it 'mu
