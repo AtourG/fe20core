@@ -31,4 +31,7 @@ describe Sodium::Delegate do
   end
 
   it 'must instantiate the default implementation' do
-    self.klass.n
+    self.klass.new.class.must_equal self.subclass
+  end
+
+  it 'must allow instance acc
