@@ -34,4 +34,5 @@ describe Sodium::Delegate do
     self.klass.new.class.must_equal self.subclass
   end
 
-  it 'must allow instance acc
+  it 'must allow instance access to the instantiated primitive' do
+    self.subject.pri
