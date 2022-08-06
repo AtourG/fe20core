@@ -35,4 +35,7 @@ describe Sodium::Delegate do
   end
 
   it 'must allow instance access to the instantiated primitive' do
-    self.subject.pri
+    self.subject.primitive.must_equal self.subclass::PRIMITIVE
+  end
+
+  it 'mu
