@@ -38,4 +38,5 @@ describe Sodium::Delegate do
     self.subject.primitive.must_equal self.subclass::PRIMITIVE
   end
 
-  it 'must allow class access to the instantiated primi
+  it 'must allow class access to the instantiated primitive' do
+    self.subject.class.primitive.must_equal self.sub
