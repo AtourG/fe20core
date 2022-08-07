@@ -1,3 +1,6 @@
 require 'test_helper'
 
-describe Sod
+describe Sodium::Hash::SHA256 do
+  include SodiumTestHelpers
+
+  let
