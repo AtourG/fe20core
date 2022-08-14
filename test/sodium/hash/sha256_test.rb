@@ -8,4 +8,6 @@ describe Sodium::Hash::SHA256 do
 
   let :constants do
     { :BYTES => 32 }
- 
+  end
+
+  let_64(:hash)      { 'q1MKE+RZFJgrefm34/uplM/R8/si9xzq
