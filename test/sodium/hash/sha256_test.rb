@@ -12,3 +12,6 @@ describe Sodium::Hash::SHA256 do
 
   let_64(:hash)      { 'q1MKE+RZFJgrefm34/uplM/R8/si9xzqGvvwK0YMbR0=' }
   let_64(:plaintext) { 'bWVzc2FnZQ==' }
+
+  it '::primitive must be correct' do
+    self.klass
