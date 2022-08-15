@@ -14,4 +14,7 @@ describe Sodium::Hash::SHA256 do
   let_64(:plaintext) { 'bWVzc2FnZQ==' }
 
   it '::primitive must be correct' do
-    self.klass
+    self.klass.primitive.must_equal self.primitive
+  end
+
+  it 'must have correc
