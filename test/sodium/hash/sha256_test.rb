@@ -17,4 +17,5 @@ describe Sodium::Hash::SHA256 do
     self.klass.primitive.must_equal self.primitive
   end
 
-  it 'must have correc
+  it 'must have correct values for its constants' do
+    self.constants
