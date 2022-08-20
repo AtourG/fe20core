@@ -20,3 +20,9 @@ describe Sodium::Hash::SHA256 do
   it 'must have correct values for its constants' do
     self.constants.each_pair do |name, value|
       self.klass[name].must_equal value
+    end
+  end
+
+  it 'must generate hashes' do
+    self.klass.hash(
+      s
