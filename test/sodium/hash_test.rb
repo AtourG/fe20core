@@ -26,3 +26,12 @@ describe Sodium::Hash do
 
       klass.hash(self.plaintext).to_s.must_equal ''
     end
+  end
+
+  it 'must raise when failing to generate a hash' do
+    sodium_stub_failure(self.klass, :nacl) do
+      lambda { self.klass.hash(self.plaintext) }.
+        must_raise Sodium::CryptoError
+    end
+  end
+end
