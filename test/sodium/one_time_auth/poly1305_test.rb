@@ -1,3 +1,6 @@
 require 'test_helper'
 
-describe Sodiu
+describe Sodium::OneTimeAuth::Poly1305 do
+  include SodiumTestHelpers
+
+  subject
