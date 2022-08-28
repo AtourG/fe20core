@@ -5,4 +5,5 @@ describe Sodium::OneTimeAuth::Poly1305 do
 
   subject { self.klass.new(self.key) }
 
-  let(:klass)     { Sod
+  let(:klass)     { Sodium::OneTimeAuth::Poly1305 }
+  let(:primitive) {
