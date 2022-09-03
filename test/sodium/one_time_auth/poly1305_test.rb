@@ -9,4 +9,8 @@ describe Sodium::OneTimeAuth::Poly1305 do
   let(:primitive) { :poly1305 }
 
   let :constants do
-    { :
+    { :BYTES    => 16,
+      :KEYBYTES => 32, }
+  end
+
+  let_64(
