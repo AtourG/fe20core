@@ -13,4 +13,5 @@ describe Sodium::OneTimeAuth::Poly1305 do
       :KEYBYTES => 32, }
   end
 
-  let_64(:key)           { 'tZUeTVtSHOfgOei4DUwCt10xqrIYhALp
+  let_64(:key)           { 'tZUeTVtSHOfgOei4DUwCt10xqrIYhALpO08NIDMWFB0=' }
+  let_64(:authenticator) { 'n+6StqC6
