@@ -18,4 +18,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
   let_64(:plaintext)     { 'bWVzc2FnZQ==' }
 
   it '::primitive must be correct' do
-    self.klass.prim
+    self.klass.primitive.must_equal self.primitive
+  end
+
+  it 'must have correct 
