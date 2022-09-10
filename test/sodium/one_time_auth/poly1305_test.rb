@@ -15,4 +15,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
 
   let_64(:key)           { 'tZUeTVtSHOfgOei4DUwCt10xqrIYhALpO08NIDMWFB0=' }
   let_64(:authenticator) { 'n+6StqC6SLRuLT8YZoQoFw==' }
-  let_64(:plaintext)     { 'bWVzc2FnZQ=='
+  let_64(:plaintext)     { 'bWVzc2FnZQ==' }
+
+  it '::primitive must be correct' do
+    self.klass.prim
