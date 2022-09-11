@@ -26,3 +26,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
       self.klass[name].must_equal value
     end
   end
+
+  it 'must mint keys' do
+    self.klass.key.bytesize.
+ 
