@@ -21,4 +21,5 @@ describe Sodium::OneTimeAuth::Poly1305 do
     self.klass.primitive.must_equal self.primitive
   end
 
-  it 'must have correct 
+  it 'must have correct values for its constants' do
+    self.constants.each_pair do |na
