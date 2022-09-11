@@ -29,4 +29,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
 
   it 'must mint keys' do
     self.klass.key.bytesize.
- 
+      must_equal self.klass::KEYBYTES
+  end
+
+  it 'must genera
