@@ -32,4 +32,6 @@ describe Sodium::OneTimeAuth::Poly1305 do
       must_equal self.klass::KEYBYTES
   end
 
-  it 'must genera
+  it 'must generate authenticators' do
+    self.subject.one_time_auth(
+      self
