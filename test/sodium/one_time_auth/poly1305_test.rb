@@ -38,4 +38,6 @@ describe Sodium::OneTimeAuth::Poly1305 do
     ).to_s.must_equal self.authenticator
   end
 
-  it 'mus
+  it 'must verify authenticators' do
+    self.subject.verify(
+      self.p
