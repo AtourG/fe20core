@@ -43,3 +43,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
       self.plaintext,
       self.authenticator
     ).must_equal true
+  end
+
+  it 'must not verify forged authenticators' do
+    self.subj
