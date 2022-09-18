@@ -49,4 +49,6 @@ describe Sodium::OneTimeAuth::Poly1305 do
     self.subject.verify(
       self.plaintext,
       self.authenticator.succ
- 
+    ).must_equal false
+  end
+end
