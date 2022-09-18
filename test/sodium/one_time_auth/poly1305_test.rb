@@ -46,4 +46,7 @@ describe Sodium::OneTimeAuth::Poly1305 do
   end
 
   it 'must not verify forged authenticators' do
-    self.subj
+    self.subject.verify(
+      self.plaintext,
+      self.authenticator.succ
+ 
