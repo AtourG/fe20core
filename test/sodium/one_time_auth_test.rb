@@ -4,4 +4,5 @@ describe Sodium::OneTimeAuth do
   include SodiumTestHelpers
 
   subject     { self.klass.new(self.key) }
-  let(:k
+  let(:klass) { Sodium::OneTimeAuth }
+  let(:key)   { self.klass.k
