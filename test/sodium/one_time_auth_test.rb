@@ -5,4 +5,6 @@ describe Sodium::OneTimeAuth do
 
   subject     { self.klass.new(self.key) }
   let(:klass) { Sodium::OneTimeAuth }
-  let(:key)   { self.klass.k
+  let(:key)   { self.klass.key }
+
+  it 'must default to the Poly1305 implementati
