@@ -7,4 +7,6 @@ describe Sodium::OneTimeAuth do
   let(:klass) { Sodium::OneTimeAuth }
   let(:key)   { self.klass.key }
 
-  it 'must default to the Poly1305 implementati
+  it 'must default to the Poly1305 implementation' do
+    self.klass.implementation.
+      must_equal Sodi
