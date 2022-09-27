@@ -9,4 +9,7 @@ describe Sodium::OneTimeAuth do
 
   it 'must default to the Poly1305 implementation' do
     self.klass.implementation.
-      must_equal Sodi
+      must_equal Sodium::OneTimeAuth::Poly1305
+  end
+
+  it 'must allow acce
