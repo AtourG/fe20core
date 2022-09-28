@@ -12,4 +12,5 @@ describe Sodium::OneTimeAuth do
       must_equal Sodium::OneTimeAuth::Poly1305
   end
 
-  it 'must allow acce
+  it 'must allow access to alternate implementations' do
+    self.klass.implementation(:
