@@ -13,4 +13,8 @@ describe Sodium::OneTimeAuth do
   end
 
   it 'must allow access to alternate implementations' do
-    self.klass.implementation(:
+    self.klass.implementation(:foo).
+      must_equal nil
+  end
+
+  it 'must instantiate the defaul
