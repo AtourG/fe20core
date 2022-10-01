@@ -19,4 +19,7 @@ describe Sodium::OneTimeAuth do
 
   it 'must instantiate the default implementation' do
     self.subject.
-      must_be_kind_of Sodium::O
+      must_be_kind_of Sodium::OneTimeAuth::Poly1305
+  end
+
+  it 'must mint keys from th
