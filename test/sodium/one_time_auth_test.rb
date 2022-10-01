@@ -22,4 +22,5 @@ describe Sodium::OneTimeAuth do
       must_be_kind_of Sodium::OneTimeAuth::Poly1305
   end
 
-  it 'must mint keys from th
+  it 'must mint keys from the default implementation' do
+    sodium_mock_default(sel
