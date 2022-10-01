@@ -17,4 +17,6 @@ describe Sodium::OneTimeAuth do
       must_equal nil
   end
 
-  it 'must instantiate the defaul
+  it 'must instantiate the default implementation' do
+    self.subject.
+      must_be_kind_of Sodium::O
