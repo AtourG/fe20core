@@ -24,4 +24,8 @@ describe Sodium::OneTimeAuth do
 
   it 'must mint keys from the default implementation' do
     sodium_mock_default(self.klass) do |klass, mock|
-      mock.expect :[], 0, [:KE
+      mock.expect :[], 0, [:KEYBYTES]
+
+      klass.key.to_s.must_equal ''
+    end
+  en
