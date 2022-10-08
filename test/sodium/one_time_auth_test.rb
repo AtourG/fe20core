@@ -28,4 +28,6 @@ describe Sodium::OneTimeAuth do
 
       klass.key.to_s.must_equal ''
     end
-  en
+  end
+
+  it 'must raise when instantiating with an invalid key
