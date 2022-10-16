@@ -38,4 +38,6 @@ describe Sodium::OneTimeAuth do
   it 'must raise when verifying an invalid authenticator' do
     lambda { self.subject.verify('message', 'blaah') }.
       must_raise Sodium::LengthError
-  
+  end
+
+  it 'must raise when failing to generate an authe
