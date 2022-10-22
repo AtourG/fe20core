@@ -40,4 +40,6 @@ describe Sodium::OneTimeAuth do
       must_raise Sodium::LengthError
   end
 
-  it 'must raise when failing to generate an authe
+  it 'must raise when failing to generate an authenticator' do
+    sodium_stub_failure(self.klass, :nacl) do
+  
