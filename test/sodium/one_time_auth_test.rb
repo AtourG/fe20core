@@ -43,3 +43,7 @@ describe Sodium::OneTimeAuth do
   it 'must raise when failing to generate an authenticator' do
     sodium_stub_failure(self.klass, :nacl) do
       lambda { self.subject.one_time_auth('message') }.
+        must_raise Sodium::CryptoError
+    end
+  end
+end
