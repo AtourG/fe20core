@@ -8,4 +8,5 @@ describe Sodium::Random do
     subject.bytes(400).bytesize.must_equal 400
   end
 
-  it '
+  it '::bytes must generate random bytes' do
+    1_00
