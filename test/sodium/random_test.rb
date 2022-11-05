@@ -5,4 +5,7 @@ describe Sodium::Random do
 
   it '::bytes must generate a byte string of desired length' do
     subject.bytes( 30).bytesize.must_equal  30
-    sub
+    subject.bytes(400).bytesize.must_equal 400
+  end
+
+  it '
