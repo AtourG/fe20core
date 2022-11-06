@@ -9,4 +9,5 @@ describe Sodium::Random do
   end
 
   it '::bytes must generate random bytes' do
-    1_00
+    1_000.times.map { subject.bytes(16) }.uniq.length.
+  
