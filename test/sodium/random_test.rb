@@ -10,4 +10,7 @@ describe Sodium::Random do
 
   it '::bytes must generate random bytes' do
     1_000.times.map { subject.bytes(16) }.uniq.length.
-  
+      must_equal 1_000
+  end
+
+  it '::integer must generate a single rand
