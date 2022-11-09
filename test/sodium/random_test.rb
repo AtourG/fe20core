@@ -13,4 +13,6 @@ describe Sodium::Random do
       must_equal 1_000
   end
 
-  it '::integer must generate a single rand
+  it '::integer must generate a single random number' do
+    1_000.times.map { subject.integer }.uniq.length.
+      mu
