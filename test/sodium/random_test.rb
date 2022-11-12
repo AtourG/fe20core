@@ -18,4 +18,5 @@ describe Sodium::Random do
       must_equal 1_000
   end
 
-  it 'must generate random nu
+  it 'must generate random numbers up to a given max' do
+    1_000.times.map { subject.
