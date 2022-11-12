@@ -20,4 +20,6 @@ describe Sodium::Random do
 
   it 'must generate random numbers up to a given max' do
     1_000.times.map { subject.integer(4) }.any? {|n| n >= 4 }.
-      must_equal
+      must_equal false
+  end
+end
