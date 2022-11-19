@@ -5,4 +5,5 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
 
   subject { self.klass.new(self.key) }
 
-  let(:klass)     { Sodium::SecretB
+  let(:klass)     { Sodium::SecretBox::XSalsa20Poly1305 }
+  let(:primitive) { :xsalsa20poly13
