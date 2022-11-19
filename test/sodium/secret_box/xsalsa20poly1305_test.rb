@@ -10,4 +10,6 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
 
   let :constants do
     { :KEYBYTES     => 32,
-      :NONCEBYTES 
+      :NONCEBYTES   => 24,
+      :ZEROBYTES    => 32,
+      :BOXZEROBYTES =>
