@@ -12,4 +12,7 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
     { :KEYBYTES     => 32,
       :NONCEBYTES   => 24,
       :ZEROBYTES    => 32,
-      :BOXZEROBYTES =>
+      :BOXZEROBYTES => 16, }
+  end
+
+  let_64(:key)        { 'MawdlglK6Ue29vbh+4vJb074Pl
