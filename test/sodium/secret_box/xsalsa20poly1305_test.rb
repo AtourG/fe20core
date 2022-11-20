@@ -15,4 +15,5 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
       :BOXZEROBYTES => 16, }
   end
 
-  let_64(:key)        { 'MawdlglK6Ue29vbh+4vJb074Pl
+  let_64(:key)        { 'MawdlglK6Ue29vbh+4vJb074PlFShQ6H1Cm6x2LiIP0=' }
+  let_64(:nonce)      { 'COwsnSeFSTeld
