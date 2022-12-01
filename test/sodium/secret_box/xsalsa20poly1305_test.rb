@@ -31,4 +31,7 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
   end
 
   it 'must mint keys' do
-    self.klass.key.bytesiz
+    self.klass.key.bytesize.must_equal self.klass[:KEYBYTES]
+  end
+
+  it 'must generate clos
