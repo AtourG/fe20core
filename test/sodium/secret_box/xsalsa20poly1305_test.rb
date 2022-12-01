@@ -25,4 +25,6 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
   end
 
   it 'must have correct values for its constants' do
-    self.constants.each_pair do 
+    self.constants.each_pair do |name, value|
+      self.klass[name].must_equal value
+    end
