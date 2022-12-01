@@ -28,3 +28,7 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
     self.constants.each_pair do |name, value|
       self.klass[name].must_equal value
     end
+  end
+
+  it 'must mint keys' do
+    self.klass.key.bytesiz
