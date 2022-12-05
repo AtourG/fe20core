@@ -34,4 +34,5 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
     self.klass.key.bytesize.must_equal self.klass[:KEYBYTES]
   end
 
-  it 'must generate clos
+  it 'must generate closed secret boxes' do
+    self.subject.secret_box(
