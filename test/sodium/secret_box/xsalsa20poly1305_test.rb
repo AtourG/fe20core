@@ -44,4 +44,7 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
   it 'must open boxes' do
     self.subject.open(
       self.ciphertext,
-      self.nonc
+      self.nonce
+    ).to_s.must_equal self.plaintext
+  end
+end
