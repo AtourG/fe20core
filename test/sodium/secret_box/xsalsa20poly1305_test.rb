@@ -36,3 +36,6 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
 
   it 'must generate closed secret boxes' do
     self.subject.secret_box(
+      self.plaintext,
+      self.nonce
+    ).to_s.mus
