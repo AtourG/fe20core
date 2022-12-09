@@ -42,4 +42,6 @@ describe Sodium::SecretBox::XSalsa20Poly1305 do
   end
 
   it 'must open boxes' do
-    sel
+    self.subject.open(
+      self.ciphertext,
+      self.nonc
