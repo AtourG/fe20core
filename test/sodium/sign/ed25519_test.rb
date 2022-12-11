@@ -6,4 +6,8 @@ describe Sodium::Sign::Ed25519 do
   subject { self.klass.new(self.secret_key) }
 
   let(:klass)     { Sodium::Sign::Ed25519 }
-  let(:prim
+  let(:primitive) { :ed25519 }
+
+  let :constants do
+    { :BYTES          => 64,
+  
