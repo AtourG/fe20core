@@ -10,4 +10,5 @@ describe Sodium::Sign::Ed25519 do
 
   let :constants do
     { :BYTES          => 64,
-  
+      :PUBLICKEYBYTES => 32,
+      :SECRETKEYBYTES => 64, }
