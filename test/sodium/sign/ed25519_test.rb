@@ -14,4 +14,5 @@ describe Sodium::Sign::Ed25519 do
       :SECRETKEYBYTES => 64, }
   end
 
-  let_64(:secret_key) { 'PZstPgy/LfTLN47rK69qHv9FPFRhoNRrIcjrxpIl4U0PhSflLvk7kqOrVPJdefT0Cvdwhx7N
+  let_64(:secret_key) { 'PZstPgy/LfTLN47rK69qHv9FPFRhoNRrIcjrxpIl4U0PhSflLvk7kqOrVPJdefT0Cvdwhx7Nyss0TItOCvPH4g==' }
+  let_64(:public_key) { 'D4Un5S75
