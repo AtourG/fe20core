@@ -19,4 +19,8 @@ describe Sodium::Sign::Ed25519 do
   let_64(:plaintext)  { 'bWVzc2FnZQ==' }
   let_64(:signature)  do
     %{ gBIV6VdlmL9aicHsrWMYhqGiQg3t1QGWmuj5oUNI2DN6FeaKKIkjPZ/N7vTM
-       R7ebY7+C7teQJMSrx
+       R7ebY7+C7teQJMSrxlqTnrcnCw== }
+  end
+
+  it '::primitive must be correct' do
+    self
