@@ -18,4 +18,5 @@ describe Sodium::Sign::Ed25519 do
   let_64(:public_key) { 'D4Un5S75O5Kjq1TyXXn09Ar3cIcezcrLNEyLTgrzx+I=' }
   let_64(:plaintext)  { 'bWVzc2FnZQ==' }
   let_64(:signature)  do
-    %{ gBIV6VdlmL9aicHsrWMYhqGiQ
+    %{ gBIV6VdlmL9aicHsrWMYhqGiQg3t1QGWmuj5oUNI2DN6FeaKKIkjPZ/N7vTM
+       R7ebY7+C7teQJMSrx
