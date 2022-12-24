@@ -23,4 +23,7 @@ describe Sodium::Sign::Ed25519 do
   end
 
   it '::primitive must be correct' do
-    self
+    self.klass.primitive.must_equal self.primitive
+  end
+
+  it 'must hav
