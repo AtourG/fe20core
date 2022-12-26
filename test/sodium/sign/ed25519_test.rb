@@ -30,4 +30,7 @@ describe Sodium::Sign::Ed25519 do
     self.constants.each_pair do |name, value|
       self.klass[name].must_equal value
     end
-  e
+  end
+
+  it 'must mint secret keys' do
+    self.klass.keypair[0
