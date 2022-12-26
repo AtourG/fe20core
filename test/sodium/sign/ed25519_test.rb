@@ -26,4 +26,5 @@ describe Sodium::Sign::Ed25519 do
     self.klass.primitive.must_equal self.primitive
   end
 
-  it 'must hav
+  it 'must have correct values for its constants' do
+    self.constants.each_pair do 
