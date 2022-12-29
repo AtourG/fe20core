@@ -37,4 +37,7 @@ describe Sodium::Sign::Ed25519 do
   end
 
   it 'must mint public keys' do
-    self.klass.key
+    self.klass.keypair[1].bytesize.must_equal self.klass[:PUBLICKEYBYTES]
+  end
+
+ 
