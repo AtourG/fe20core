@@ -33,4 +33,5 @@ describe Sodium::Sign::Ed25519 do
   end
 
   it 'must mint secret keys' do
-    self.klass.keypair[0
+    self.klass.keypair[0].bytesize.must_equal self.klass[:SECRETKEYBYTES]
+  end
