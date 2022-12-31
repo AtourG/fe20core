@@ -40,4 +40,5 @@ describe Sodium::Sign::Ed25519 do
     self.klass.keypair[1].bytesize.must_equal self.klass[:PUBLICKEYBYTES]
   end
 
- 
+  it 'must generate message signatures' do
+    self.subject.sign(sel
