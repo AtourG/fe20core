@@ -46,4 +46,4 @@ describe Sodium::Sign::Ed25519 do
   end
 
   it 'must verify message signatures' do
-    sel
+    self.klass.verify(self.public_key, self.plaintext, self.si
