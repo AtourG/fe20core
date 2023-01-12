@@ -4,3 +4,5 @@ describe Sodium::Sign do
   include SodiumTestHelpers
 
   subject       { self.klass.new(self.keypair.first) }
+  let(:klass)   { Sodium::Sign }
+  let(:keypair) { sel
