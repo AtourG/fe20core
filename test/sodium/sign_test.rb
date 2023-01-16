@@ -9,4 +9,7 @@ describe Sodium::Sign do
 
   it 'must default to the Ed25519 implementation' do
     self.klass.implementation.
-      must_equal
+      must_equal Sodium::Sign::Ed25519
+  end
+
+  it 'must allow access to alternate i
