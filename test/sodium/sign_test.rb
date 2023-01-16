@@ -7,4 +7,6 @@ describe Sodium::Sign do
   let(:klass)   { Sodium::Sign }
   let(:keypair) { self.klass.keypair }
 
-  it 'must default to the Ed2551
+  it 'must default to the Ed25519 implementation' do
+    self.klass.implementation.
+      must_equal
