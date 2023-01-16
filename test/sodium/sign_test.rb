@@ -12,4 +12,6 @@ describe Sodium::Sign do
       must_equal Sodium::Sign::Ed25519
   end
 
-  it 'must allow access to alternate i
+  it 'must allow access to alternate implementations' do
+    self.klass.implementation(:xyz).
+      must_eq
