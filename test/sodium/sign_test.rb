@@ -17,4 +17,6 @@ describe Sodium::Sign do
       must_equal nil
   end
 
-  it 'must instantiate the default 
+  it 'must instantiate the default implementation' do
+    self.subject.
+      must_be_kind_of Sod
