@@ -14,4 +14,7 @@ describe Sodium::Sign do
 
   it 'must allow access to alternate implementations' do
     self.klass.implementation(:xyz).
-      must_eq
+      must_equal nil
+  end
+
+  it 'must instantiate the default 
