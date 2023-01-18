@@ -19,4 +19,7 @@ describe Sodium::Sign do
 
   it 'must instantiate the default implementation' do
     self.subject.
-      must_be_kind_of Sod
+      must_be_kind_of Sodium::Sign::Ed25519
+  end
+
+  it 'must mint keys from the de
