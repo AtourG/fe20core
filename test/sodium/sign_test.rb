@@ -22,4 +22,5 @@ describe Sodium::Sign do
       must_be_kind_of Sodium::Sign::Ed25519
   end
 
-  it 'must mint keys from the de
+  it 'must mint keys from the default implementation' do
+    sodium_mock_default(self.klass) do |
