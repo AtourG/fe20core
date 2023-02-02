@@ -24,4 +24,5 @@ describe Sodium::Sign do
 
   it 'must mint keys from the default implementation' do
     sodium_mock_default(self.klass) do |klass, mock|
-      mock.expect :nacl_keypair, true, [ FFI::Point
+      mock.expect :nacl_keypair, true, [ FFI::Pointer, FFI::Pointer]
+      mock.expect :[],           0,    [:PUBLICKEY
