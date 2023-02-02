@@ -26,4 +26,8 @@ describe Sodium::Sign do
     sodium_mock_default(self.klass) do |klass, mock|
       mock.expect :nacl_keypair, true, [ FFI::Pointer, FFI::Pointer]
       mock.expect :[],           0,    [:PUBLICKEYBYTES]
-      mock.expect :[],           0,    [:SECRE
+      mock.expect :[],           0,    [:SECRETKEYBYTES]
+
+      sk, pk = klass.keypair
+
+      sk.to_s.must
