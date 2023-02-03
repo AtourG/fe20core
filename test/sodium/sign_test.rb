@@ -30,4 +30,9 @@ describe Sodium::Sign do
 
       sk, pk = klass.keypair
 
-      sk.to_s.must
+      sk.to_s.must_equal ''
+      pk.to_s.must_equal ''
+    end
+  end
+
+  it 'mus
