@@ -36,4 +36,6 @@ describe Sodium::Sign do
   end
 
   it 'must raise when instantiating with an invalid key' do
-    secret_key 
+    secret_key = self.keypair.first
+
+    lambda { self.klass.new(secret_key.t
