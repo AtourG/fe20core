@@ -35,4 +35,5 @@ describe Sodium::Sign do
     end
   end
 
-  it 'mus
+  it 'must raise when instantiating with an invalid key' do
+    secret_key 
