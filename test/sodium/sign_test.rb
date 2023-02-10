@@ -44,4 +44,6 @@ describe Sodium::Sign do
 
   it 'must raise when failing to generate keypairs' do
     sodium_stub_failure(self.klass, :nacl_keypair) do
-      lambd
+      lambda { self.keypair }.
+        must_raise Sodium::CryptoError
+ 
