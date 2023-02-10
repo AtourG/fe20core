@@ -42,4 +42,5 @@ describe Sodium::Sign do
       must_raise Sodium::LengthError
   end
 
-  it 'm
+  it 'must raise when failing to generate keypairs' do
+    sodiu
