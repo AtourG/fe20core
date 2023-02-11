@@ -50,4 +50,5 @@ describe Sodium::Sign do
   end
 
   it 'must raise when failing to sign a message' do
-    sodiu
+    sodium_stub_failure(self.klass, :nacl) do
+      lambda { self.subjec
