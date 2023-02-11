@@ -46,4 +46,8 @@ describe Sodium::Sign do
     sodium_stub_failure(self.klass, :nacl_keypair) do
       lambda { self.keypair }.
         must_raise Sodium::CryptoError
- 
+    end
+  end
+
+  it 'must raise when failing to sign a message' do
+    sodiu
