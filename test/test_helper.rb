@@ -1,2 +1,5 @@
 require 'coveralls'
-require
+require 'simplecov'
+
+SimpleCov.start do
+  add_filter '/te
