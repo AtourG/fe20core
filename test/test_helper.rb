@@ -6,4 +6,7 @@ SimpleCov.start do
   add_filter '/vendor/'
 end
 
-Coveralls.wear! if 
+Coveralls.wear! if ENV['TRAVIS']
+
+require 'minitest/autorun'
+require 'minitest/spec
