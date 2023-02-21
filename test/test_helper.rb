@@ -9,4 +9,10 @@ end
 Coveralls.wear! if ENV['TRAVIS']
 
 require 'minitest/autorun'
-require 'minitest/spec
+require 'minitest/spec'
+require 'minitest/pride'
+
+require 'sodium'
+require 'base64'
+
+module Sodium
