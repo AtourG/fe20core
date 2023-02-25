@@ -23,4 +23,7 @@ module SodiumTestHelpers
   end
 
   def self.included(subclass)
-    subclass.ex
+    subclass.extend ClassMethods
+  end
+
+  def sodium_override_def
