@@ -17,4 +17,6 @@ require 'base64'
 
 module SodiumTestHelpers
   module ClassMethods
-    def let_64
+    def let_64(name)
+      define_method(name) { Base64.decode64 yield }
+    end
