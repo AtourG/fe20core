@@ -20,3 +20,7 @@ module SodiumTestHelpers
     def let_64(name)
       define_method(name) { Base64.decode64 yield }
     end
+  end
+
+  def self.included(subclass)
+    subclass.ex
