@@ -15,4 +15,6 @@ require 'minitest/pride'
 require 'sodium'
 require 'base64'
 
-module Sodium
+module SodiumTestHelpers
+  module ClassMethods
+    def let_64
