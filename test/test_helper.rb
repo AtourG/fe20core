@@ -26,4 +26,6 @@ module SodiumTestHelpers
     subclass.extend ClassMethods
   end
 
-  def sodium_override_def
+  def sodium_override_default(klass, implementation)
+    klass                = klass.dup
+    klass.im
