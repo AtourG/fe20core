@@ -28,4 +28,8 @@ module SodiumTestHelpers
 
   def sodium_override_default(klass, implementation)
     klass                = klass.dup
-    klass.im
+    klass.implementation = implementation
+    yield klass
+  end
+
+  def sodium_mock_
