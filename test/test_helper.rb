@@ -32,4 +32,6 @@ module SodiumTestHelpers
     yield klass
   end
 
-  def sodium_mock_
+  def sodium_mock_default(klass)
+    mock = MiniTest::Mock.new
+    sodium_ove
