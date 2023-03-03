@@ -34,4 +34,5 @@ module SodiumTestHelpers
 
   def sodium_mock_default(klass)
     mock = MiniTest::Mock.new
-    sodium_ove
+    sodium_override_default(klass, mock) {|dup| yield dup, mock }
+    mock
