@@ -39,4 +39,6 @@ module SodiumTestHelpers
   end
 
   def sodium_stub_failure(klass, method, &block)
-  
+    klass.implementation.stub(method, false, &block)
+  end
+end
